@@ -38,6 +38,7 @@
     <ClInclude Include="_Includes\RenderManager.h" />
     <ClInclude Include="_Includes\SuperMarioBros.h" />
     <ClInclude Include="_Includes\TransformComponent.h" />
+    <ClInclude Include="_Includes\MathUtilities.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">

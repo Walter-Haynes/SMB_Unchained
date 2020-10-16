@@ -247,6 +247,7 @@
     <ClInclude Include="_Includes\Instancer.h" />
     <ClInclude Include="_Includes\List.h" />
     <ClInclude Include="_Includes\Manager.h" />
+    <ClInclude Include="_Includes\MathUtilities.h" />
     <ClInclude Include="_Includes\precomp.h" />
     <ClInclude Include="_Includes\RendererComponent.h" />
     <ClInclude Include="_Includes\RenderManager.h" />
