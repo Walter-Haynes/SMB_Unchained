@@ -99,10 +99,10 @@
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <AdditionalDependencies>winmm.lib;advapi32.lib;user32.lib;sdl2.lib;sdl2main.lib;opengl32.lib;freeimage.lib</AdditionalDependencies>
@@ -161,12 +161,12 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Create</PrecompiledHeader>
       <BrowseInformation>
       </BrowseInformation>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <AdditionalDependencies>winmm.lib;advapi32.lib;user32.lib;sdl2.lib;sdl2main.lib;opengl32.lib;freeimage.lib</AdditionalDependencies>
@@ -224,38 +224,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="surface.cpp" />
-    <ClCompile Include="template.cpp">
+    <ClCompile Include="_Sources\game.cpp" />
+    <ClCompile Include="_Sources\surface.cpp" />
+    <ClCompile Include="_Sources\template.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="_Sources\Camera.cpp" />
-    <ClCompile Include="_Sources\SuperMarioBros.cpp" />
-    <ClCompile Include="_Sources\InputManager.cpp" />
-    <ClCompile Include="_Sources\RendererComponent.cpp" />
-    <ClCompile Include="_Sources\RenderManager.cpp" />
-    <ClCompile Include="_Sources\TimeManager.cpp" />
-    <ClCompile Include="_Sources\TransformComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h" />
-    <ClInclude Include="precomp.h" />
-    <ClInclude Include="surface.h" />
-    <ClInclude Include="template.h" />
-    <ClInclude Include="_Includes\Behaviour.h" />
-    <ClInclude Include="_Includes\Camera.h" />
-    <ClInclude Include="_Includes\Component.h" />
-    <ClInclude Include="_Includes\SuperMarioBros.h" />
-    <ClInclude Include="_Includes\GameSettings.h" />
-    <ClInclude Include="_Includes\InputManager.h" />
-    <ClInclude Include="_Includes\Instancer.h" />
-    <ClInclude Include="_Includes\List.h" />
-    <ClInclude Include="_Includes\Manager.h" />
-    <ClInclude Include="_Includes\Math.h" />
-    <ClInclude Include="_Includes\RendererComponent.h" />
-    <ClInclude Include="_Includes\RenderManager.h" />
-    <ClInclude Include="_Includes\TimeManager.h" />
-    <ClInclude Include="_Includes\TransformComponent.h" />
+    <ClInclude Include="_Includes\game.h" />
+    <ClInclude Include="_Includes\precomp.h" />
+    <ClInclude Include="_Includes\surface.h" />
+    <ClInclude Include="_Includes\template.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="_readme.txt" />

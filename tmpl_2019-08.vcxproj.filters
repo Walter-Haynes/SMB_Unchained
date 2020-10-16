@@ -1,44 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="surface.cpp">
+    <ClCompile Include="_Sources\surface.cpp">
       <Filter>template code</Filter>
     </ClCompile>
-    <ClCompile Include="template.cpp">
+    <ClCompile Include="_Sources\template.cpp">
       <Filter>template code</Filter>
     </ClCompile>
-    <ClCompile Include="_Sources\Camera.cpp" />
-    <ClCompile Include="_Sources\InputManager.cpp" />
-    <ClCompile Include="_Sources\RendererComponent.cpp" />
-    <ClCompile Include="_Sources\RenderManager.cpp" />
-    <ClCompile Include="_Sources\TimeManager.cpp" />
-    <ClCompile Include="_Sources\TransformComponent.cpp" />
-    <ClCompile Include="_Sources\SuperMarioBros.cpp" />
+    <ClCompile Include="_Sources\game.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game.h" />
-    <ClInclude Include="surface.h">
+    <ClInclude Include="_Includes\precomp.h" />
+    <ClInclude Include="_Includes\surface.h">
       <Filter>template code</Filter>
     </ClInclude>
-    <ClInclude Include="template.h">
+    <ClInclude Include="_Includes\template.h">
       <Filter>template code</Filter>
     </ClInclude>
-    <ClInclude Include="precomp.h" />
-    <ClInclude Include="_Includes\Behaviour.h" />
-    <ClInclude Include="_Includes\Camera.h" />
-    <ClInclude Include="_Includes\Component.h" />
-    <ClInclude Include="_Includes\GameSettings.h" />
-    <ClInclude Include="_Includes\InputManager.h" />
-    <ClInclude Include="_Includes\Instancer.h" />
-    <ClInclude Include="_Includes\List.h" />
-    <ClInclude Include="_Includes\Manager.h" />
-    <ClInclude Include="_Includes\Math.h" />
-    <ClInclude Include="_Includes\RendererComponent.h" />
-    <ClInclude Include="_Includes\RenderManager.h" />
-    <ClInclude Include="_Includes\TimeManager.h" />
-    <ClInclude Include="_Includes\TransformComponent.h" />
-    <ClInclude Include="_Includes\SuperMarioBros.h" />
+    <ClInclude Include="_Includes\game.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">
