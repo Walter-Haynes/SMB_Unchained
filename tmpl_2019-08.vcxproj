@@ -90,7 +90,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>lib;lib\OpenGL;lib\SDL2-2.0.3\include;lib\freeimage\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>lib;lib\OpenGL;lib\SDL2-2.0.3\include;lib\freeimage\inc;_Includes</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -107,7 +107,7 @@
     <Link>
       <AdditionalDependencies>winmm.lib;advapi32.lib;user32.lib;sdl2.lib;sdl2main.lib;opengl32.lib;freeimage.lib</AdditionalDependencies>
       <OutputFile>$(TargetPath)</OutputFile>
-      <AdditionalLibraryDirectories>lib\SDL2-2.0.3\lib\x86;lib\OpenGL;lib\freeimage\lib32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>lib\SDL2-2.0.3\lib\x86;lib\OpenGL;lib\freeimage\lib32;_Includes</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -153,7 +153,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <WholeProgramOptimization>false</WholeProgramOptimization>
-      <AdditionalIncludeDirectories>lib;lib\OpenGL;lib\SDL2-2.0.3\include;lib\freeimage\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>lib;lib\OpenGL;lib\SDL2-2.0.3\include;lib\freeimage\inc;_Includes</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -171,7 +171,7 @@
     <Link>
       <AdditionalDependencies>winmm.lib;advapi32.lib;user32.lib;sdl2.lib;sdl2main.lib;opengl32.lib;freeimage.lib</AdditionalDependencies>
       <OutputFile>$(TargetPath)</OutputFile>
-      <AdditionalLibraryDirectories>lib\SDL2-2.0.3\lib\x86;lib\OpenGL;lib\freeimage\lib32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>lib\SDL2-2.0.3\lib\x86;lib\OpenGL;lib\freeimage\lib32;_Includes</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
