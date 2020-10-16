@@ -1,3 +1,4 @@
+#include "precomp.h"
 // Template, UU version
 // IGAD/NHTV/UU - Jacco Bikker - 2006-2017
 
@@ -11,7 +12,6 @@
 #pragma warning (disable : 4311) // pointer truncation from HANDLE to long
 #endif
 
-#include "precomp.h"
 #include "game.h"
 
 #include <fcntl.h>

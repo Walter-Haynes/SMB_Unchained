@@ -8,6 +8,13 @@
       <Filter>template code</Filter>
     </ClCompile>
     <ClCompile Include="_Sources\game.cpp" />
+    <ClCompile Include="_Sources\Camera.cpp" />
+    <ClCompile Include="_Sources\InputManager.cpp" />
+    <ClCompile Include="_Sources\RendererComponent.cpp" />
+    <ClCompile Include="_Sources\RenderManager.cpp" />
+    <ClCompile Include="_Sources\SuperMarioBros.cpp" />
+    <ClCompile Include="_Sources\TimeManager.cpp" />
+    <ClCompile Include="_Sources\TransformComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_Includes\precomp.h" />
@@ -18,6 +25,20 @@
       <Filter>template code</Filter>
     </ClInclude>
     <ClInclude Include="_Includes\game.h" />
+    <ClInclude Include="_Includes\Behaviour.h" />
+    <ClInclude Include="_Includes\Camera.h" />
+    <ClInclude Include="_Includes\Component.h" />
+    <ClInclude Include="_Includes\GameSettings.h" />
+    <ClInclude Include="_Includes\InputManager.h" />
+    <ClInclude Include="_Includes\Instancer.h" />
+    <ClInclude Include="_Includes\List.h" />
+    <ClInclude Include="_Includes\Manager.h" />
+    <ClInclude Include="_Includes\Math.h" />
+    <ClInclude Include="_Includes\RendererComponent.h" />
+    <ClInclude Include="_Includes\RenderManager.h" />
+    <ClInclude Include="_Includes\SuperMarioBros.h" />
+    <ClInclude Include="_Includes\TimeManager.h" />
+    <ClInclude Include="_Includes\TransformComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">
