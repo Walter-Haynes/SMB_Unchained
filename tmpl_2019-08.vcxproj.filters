@@ -25,14 +25,14 @@
       <Filter>template code</Filter>
     </ClInclude>
     <ClInclude Include="_Includes\game.h" />
+    <ClInclude Include="_Includes\Instancer.h" />
+    <ClInclude Include="_Includes\List.h" />
+    <ClInclude Include="_Includes\Manager.h" />
     <ClInclude Include="_Includes\Behaviour.h" />
     <ClInclude Include="_Includes\Camera.h" />
     <ClInclude Include="_Includes\Component.h" />
     <ClInclude Include="_Includes\GameSettings.h" />
     <ClInclude Include="_Includes\InputManager.h" />
-    <ClInclude Include="_Includes\Instancer.h" />
-    <ClInclude Include="_Includes\List.h" />
-    <ClInclude Include="_Includes\Manager.h" />
     <ClInclude Include="_Includes\Math.h" />
     <ClInclude Include="_Includes\RendererComponent.h" />
     <ClInclude Include="_Includes\RenderManager.h" />

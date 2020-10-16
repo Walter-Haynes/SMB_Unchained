@@ -3,10 +3,6 @@
 #include <TimeManager.h>
 #include <Component.h>
 
-using Engine::Managers::TimeManager;
-
-using namespace Tmpl8;
-
 namespace Engine
 {
 	namespace Components
@@ -26,7 +22,7 @@ namespace Engine
 				/// <summary> Shortcut to the GetDeltaTime value of the Time Manager. </summary>
 			static float DeltaTime()
 			{
-				return TimeManager::Instance()->GetDeltaTime();
+				return Managers::TimeManager::Instance()->GetDeltaTime();
 			}
 		};
 	}

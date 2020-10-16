@@ -10,6 +10,7 @@ using Engine::Components::Behaviour;
 using Engine::Components::TransformComponent;
 
 using Tmpl8::vec2;
+using Tmpl8::Surface;
 
 namespace Engine
 {
@@ -22,7 +23,7 @@ namespace Engine
 			explicit Camera(Surface* window);
 			Camera(int window_width, int window_height);
 
-			TransformComponent* Transform() const;
+			//TransformComponent* Transform() const;
 
 
 			Surface* GetWindow() const;
@@ -36,7 +37,6 @@ namespace Engine
 			vec2 ScreenToWorld(const vec2& screen_pos) const;
 
 			//bool IsOnScreen(RendererComponent* renderer) const;
-
 
 		private:
 			Surface* window_ = nullptr;
