@@ -67,8 +67,8 @@ struct timer
 class vec2 // adapted from https://github.com/dcow/RayTracer
 {
 public:
-	union { struct { float x, y; }; float cell[2]; };
-	vec2() {}
+	union { struct { float x, y; }; float cell[2]{}; };
+	vec2() : x(0.0f), y(0.0f) {}
 	vec2( float v ) : x( v ), y( v ) {}
 	vec2( float x, float y ) : x( x ), y( y ) {}
 	vec2 operator - () const { return vec2( -x, -y ); }
@@ -82,7 +82,7 @@ public:
 	void operator *= ( float a ) { x *= a; y *= a; }
 	float& operator [] ( const int idx ) { return cell[idx]; }
 	float length() { return sqrtf( x * x + y * y ); }
-	float sqrLentgh() { return x * x + y * y; }
+	float sqrLength() { return x * x + y * y; }
 	vec2 normalized() { float r = 1.0f / length(); return vec2( x * r, y * r ); }
 	void normalize() { float r = 1.0f / length(); x *= r; y *= r; }
 	static vec2 normalize( vec2 v ) { return v.normalized(); }
@@ -93,7 +93,7 @@ class vec3
 {
 public:
 	union { struct { float x, y, z, dummy; }; float cell[4]; };
-	vec3() {}
+	//vec3() : x(0.0f), y(0.0f), z(0.0f) {}
 	vec3( float v ) : x( v ), y( v ), z( v ) {}
 	vec3( float x, float y, float z ) : x( x ), y( y ), z( z ) {}
 	vec3 operator - () const { return vec3( -x, -y, -z ); }
@@ -107,7 +107,7 @@ public:
 	float operator [] ( const uint& idx ) const { return cell[idx]; }
 	float& operator [] ( const uint& idx ) { return cell[idx]; }
 	float length() const { return sqrtf( x * x + y * y + z * z ); }
-	float sqrLentgh() const { return x * x + y * y + z * z; }
+	float sqrLength() const { return x * x + y * y + z * z; }
 	vec3 normalized() const { float r = 1.0f / length(); return vec3( x * r, y * r, z * r ); }
 	void normalize() { float r = 1.0f / length(); x *= r; y *= r; z *= r; }
 	static vec3 normalize( const vec3 v ) { return v.normalized(); }
@@ -122,7 +122,7 @@ class vec4
 {
 public:
 	union { struct { float x, y, z, w; }; struct { vec3 xyz; float w2; }; float cell[4]; };
-	vec4() {}
+	//vec4() : x(0.0f), y(0.0f), z(0.0f), w(0,0f) {}
 	vec4( float v ) : x( v ), y( v ), z( v ), w( v ) {}
 	vec4( float x, float y, float z, float w ) : x( x ), y( y ), z( z ), w( w ) {}
 	vec4( vec3 a, float b ) : x( a.x ), y( a.y ), z( a.z ), w( b ) {}
@@ -137,7 +137,7 @@ public:
 	float& operator [] ( const int idx ) { return cell[idx]; }
 	float operator [] ( const uint& idx ) const { return cell[idx]; }
 	float length() { return sqrtf( x * x + y * y + z * z + w * w ); }
-	float sqrLentgh() { return x * x + y * y + z * z + w * w; }
+	float sqrLength() { return x * x + y * y + z * z + w * w; }
 	vec4 normalized() { float r = 1.0f / length(); return vec4( x * r, y * r, z * r, w * r ); }
 	void normalize() { float r = 1.0f / length(); x *= r; y *= r; z *= r; w *= r; }
 	static vec4 normalize( vec4 v ) { return v.normalized(); }
@@ -156,7 +156,7 @@ class uint4
 {
 public:
 	union { struct { uint x, y, z, w; }; uint cell[4]; };
-	uint4() {}
+	//uint4() {}
 	uint4( int v ) : x( v ), y( v ), z( v ), w( v ) {}
 	uint4( int x, int y, int z, int w ) : x( x ), y( y ), z( z ), w( w ) {}
 	uint4 operator + ( const uint4& addOperand ) const { return uint4( x + addOperand.x, y + addOperand.y, z + addOperand.z, w + addOperand.w ); }
@@ -174,7 +174,7 @@ class int4
 {
 public:
 	union { struct { int x, y, z, w; }; int cell[4]; };
-	int4() {}
+	//int4() {}
 	int4( int v ) : x( v ), y( v ), z( v ), w( v ) {}
 	int4( int x, int y, int z, int w ) : x( x ), y( y ), z( z ), w( w ) {}
 	int4 operator - () const { return int4( -x, -y, -z, -w ); }
