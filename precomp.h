@@ -3,7 +3,7 @@
 #define SCRWIDTH		800
 #define SCRHEIGHT		512
 // #define FULLSCREEN
-// #define ADVANCEDGL	// faster if your system supports it
+#define ADVANCEDGL	// faster if your system supports it
 
 #include <cinttypes>
 #include <cmath>
@@ -20,11 +20,8 @@ extern "C"
 #include "wglext.h"
 
 #include "SDL.h"
-
 #include "FreeImage.h"
+
+
 #include "template.h"
 #include "surface.h"
-
-//SIMD Intrinsics headers.
-//#include "emmintrin.h"
-//#include "immintrin.h"
