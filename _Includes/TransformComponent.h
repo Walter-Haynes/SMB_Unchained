@@ -8,6 +8,10 @@ namespace Engine
 {
 	namespace Components
 	{
+		//TODO: redo directions, remove rotation.
+		//TODO: Screen/World Positions.
+		
+		
 		class TransformComponent final : public Component
 		{
 		public:
@@ -22,7 +26,7 @@ namespace Engine
 
 			vec2 GetPixelPos() const;
 
-			vec2 GetDirection();
+			vec2 GetDirection() const;
 
 			/*
 			vec2 GetScreenPosition()

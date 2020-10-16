@@ -2,6 +2,8 @@
 
 #include <TransformComponent.h>
 
+#include "GameSettings.h"
+
 namespace Engine
 {
 	namespace Components
@@ -11,11 +13,8 @@ namespace Engine
 			return position * Core::PIXELS_PER_UNIT;
 		}
 
-		vec2 TransformComponent::GetDirection()
+		vec2 TransformComponent::GetDirection() const
 		{
-			direction_.x = cos(rotation * Math::DEGTORAD);
-			direction_.y = sin(rotation * Math::DEGTORAD);
-
 			return direction_;
 		}
 	}
