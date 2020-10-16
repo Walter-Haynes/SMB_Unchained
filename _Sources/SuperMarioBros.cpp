@@ -23,8 +23,23 @@ namespace Core
 		
 		if(game_state == GameState::playing)
 		{
+			if (Input()->GetKeyDown("Left"))
+			{
+				printf("Left");
+			}
+			if (Input()->GetKeyDown("Right"))
+			{
+				printf("Right");
+			}
+			if (Input()->GetKeyDown("Jump"))
+			{
+				printf("Jump");
+			}
+			
 			if (Input()->GetKeyDown("Special"))
 			{
+				printf("Special");
+				
 				const vec2 cam_pos = RenderManager()->GetMainCamera()->GetCameraPosition();
 
 				RenderManager()->GetMainCamera()->SetCameraPosition(
