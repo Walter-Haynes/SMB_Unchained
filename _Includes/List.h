@@ -2,7 +2,7 @@
 
 #pragma warning( disable : 4067)
 
-constexpr auto is_buas_build = true;
+constexpr auto IS_BUAS_BUILD = true;
 
 //Somehow I can't #if IS_BUAS_BUILD the #include <ostream> please bear with me here, it's for debugging.
 #include <ostream>

@@ -23,22 +23,10 @@ namespace Core
 		
 		if(game_state == GameState::playing)
 		{
-			if (Input()->GetKeyDown("Left"))
-			{
-				printf("Left");
-			}
-			if (Input()->GetKeyDown("Right"))
-			{
-				printf("Right");
-			}
-			if (Input()->GetKeyDown("Jump"))
-			{
-				printf("Jump");
-			}
-			
+			/*
 			if (Input()->GetKeyDown("Special"))
 			{
-				printf("Special");
+				//printf("Special");
 				
 				const vec2 cam_pos = RenderManager()->GetMainCamera()->GetCameraPosition();
 
@@ -46,6 +34,7 @@ namespace Core
 					cam_pos.x + (3 * DeltaTime()), 
 					cam_pos.y - (3 * DeltaTime()));
 			}
+			*/
 		}
 		
 		RenderManager()->DrawAllRenderers();
@@ -57,56 +46,6 @@ namespace Core
 	}
 
 	/*
-	void Game::KeyUp(const int key)
-	{
-		switch (key)
-		{
-		case 4:  //A
-			Input()->left.is_pressed = false;
-			break;
-		case 7:  //D
-			Input()->right.is_pressed = false;
-			break;
-		case 26: //W
-			Input()->jump.is_pressed = false;
-			break;
-		case 44: //SPACE
-			Input()->special.is_pressed = false;
-			break;
-		default:
-			break;
-		}
-	}
-	void Game::KeyDown(const int key)
-	{
-		//Cache the time between no and first input, and use it as a seed for RNGs
-		if (is_first_input_)
-		{
-			seed_locked_in_ = true;
-			is_first_input_ = false;
-
-			printf("Set seed");
-		}
-
-		switch (key)
-		{
-		case 4:  //A
-			Input()->left.is_pressed = true;
-			break;
-		case 7:  //D
-			Input()->right.is_pressed = true;
-			break;
-		case 26: //W
-			Input()->jump.is_pressed = true;
-			break;
-		case 44: //SPACE
-			Input()->special.is_pressed = true;
-			break;
-		default:
-			break;
-		}
-	}
-
 	void Game::CollisionTest() const
 	{
 		cursor_->SetPosition(RenderManager()->ScreenToWorld(Input()->GetMousePosition() * (1.0f/PIXELS_PER_UNIT)));

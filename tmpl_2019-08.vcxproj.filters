@@ -2,52 +2,118 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="_Sources\surface.cpp">
-      <Filter>template code</Filter>
+      <Filter>Template Code</Filter>
     </ClCompile>
     <ClCompile Include="_Sources\template.cpp">
-      <Filter>template code</Filter>
+      <Filter>Template Code</Filter>
     </ClCompile>
-    <ClCompile Include="_Sources\game.cpp" />
-    <ClCompile Include="_Sources\InputManager.cpp" />
-    <ClCompile Include="_Sources\TimeManager.cpp" />
-    <ClCompile Include="_Sources\Camera.cpp" />
-    <ClCompile Include="_Sources\RendererComponent.cpp" />
-    <ClCompile Include="_Sources\RenderManager.cpp" />
-    <ClCompile Include="_Sources\SuperMarioBros.cpp" />
-    <ClCompile Include="_Sources\TransformComponent.cpp" />
+    <ClCompile Include="_Sources\game.cpp">
+      <Filter>Template Code</Filter>
+    </ClCompile>
+    <ClCompile Include="_Sources\SuperMarioBros.cpp">
+      <Filter>Game Code</Filter>
+    </ClCompile>
+    <ClCompile Include="_Sources\Camera.cpp">
+      <Filter>Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="_Sources\TimeManager.cpp">
+      <Filter>Engine Code\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="_Sources\RenderManager.cpp">
+      <Filter>Engine Code\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="_Sources\InputManager.cpp">
+      <Filter>Engine Code\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="_Sources\RendererComponent.cpp">
+      <Filter>Engine Code\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="_Sources\TransformComponent.cpp">
+      <Filter>Engine Code\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="_Includes\precomp.h" />
     <ClInclude Include="_Includes\surface.h">
-      <Filter>template code</Filter>
+      <Filter>Template Code</Filter>
     </ClInclude>
     <ClInclude Include="_Includes\template.h">
-      <Filter>template code</Filter>
+      <Filter>Template Code</Filter>
     </ClInclude>
-    <ClInclude Include="_Includes\game.h" />
-    <ClInclude Include="_Includes\Instancer.h" />
-    <ClInclude Include="_Includes\List.h" />
-    <ClInclude Include="_Includes\Manager.h" />
-    <ClInclude Include="_Includes\InputManager.h" />
-    <ClInclude Include="_Includes\TimeManager.h" />
-    <ClInclude Include="_Includes\Behaviour.h" />
-    <ClInclude Include="_Includes\Camera.h" />
-    <ClInclude Include="_Includes\Component.h" />
-    <ClInclude Include="_Includes\GameSettings.h" />
-    <ClInclude Include="_Includes\RendererComponent.h" />
-    <ClInclude Include="_Includes\RenderManager.h" />
-    <ClInclude Include="_Includes\SuperMarioBros.h" />
-    <ClInclude Include="_Includes\TransformComponent.h" />
-    <ClInclude Include="_Includes\MathUtilities.h" />
+    <ClInclude Include="_Includes\precomp.h">
+      <Filter>Template Code</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\game.h">
+      <Filter>Template Code</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\SuperMarioBros.h">
+      <Filter>Game Code</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\Behaviour.h">
+      <Filter>Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\Camera.h">
+      <Filter>Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\Component.h">
+      <Filter>Engine Code</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\TimeManager.h">
+      <Filter>Engine Code\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\RenderManager.h">
+      <Filter>Engine Code\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\InputManager.h">
+      <Filter>Engine Code\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\GameSettings.h">
+      <Filter>Game Code</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\RendererComponent.h">
+      <Filter>Engine Code\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\TransformComponent.h">
+      <Filter>Engine Code\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\MathUtilities.h">
+      <Filter>Engine Code\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\Instancer.h">
+      <Filter>Engine Code\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\Manager.h">
+      <Filter>Engine Code\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="_Includes\List.h">
+      <Filter>Engine Code\Utilities\Containers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="template code">
+    <Filter Include="Template Code">
       <UniqueIdentifier>{bf32dd6e-4be7-4889-8ac6-49e7ee163c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Code">
+      <UniqueIdentifier>{79a78105-f321-435a-8772-db90260b624c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Code">
+      <UniqueIdentifier>{a0d80334-2f9c-4fa9-9ac4-f5238c2ebf02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Code\Managers">
+      <UniqueIdentifier>{3941685d-b11c-4490-a6d5-0c2c8a7e1943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Code\Components">
+      <UniqueIdentifier>{c5e0e209-8400-4c15-908b-4cdab3106158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Code\Utilities">
+      <UniqueIdentifier>{b4ba220c-9625-4164-9769-41401195153d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Code\Utilities\Containers">
+      <UniqueIdentifier>{6917ffa4-fa3a-448d-a545-31776e51c504}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="_readme.txt">
-      <Filter>template code</Filter>
+      <Filter>Template Code</Filter>
     </Text>
   </ItemGroup>
 </Project>
