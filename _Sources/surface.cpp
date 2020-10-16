@@ -1,7 +1,7 @@
+#include "precomp.h"
+
 // Template, UU version
 // IGAD/NHTV/UU - Jacco Bikker - 2006-2017
-
-#include "precomp.h"
 
 namespace Tmpl8 {
 
