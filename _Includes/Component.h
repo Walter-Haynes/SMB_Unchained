@@ -2,61 +2,60 @@
 
 #include <List.h>
 
+#include <MathUtilities.h>
+
 namespace Engine
 {
-	namespace Components
+	class Component
 	{
-		class Component
+	public:
+		Component() = default;
+
+		Component(Component* parent) : parent_(parent)
+		{ }
+
+		virtual ~Component()
 		{
-		public:
-			Component() = default;
+			//delete parent_;
+		}
 
-			Component(Component* parent) : parent_(parent)
-			{ }
+		Component* GetParent() const
+		{
+			return parent_;
+		}
+		void SetParent(Component* parent)
+		{
+			//TODO: Maybe remove itself from current parent first? (if there is one)
 
-			virtual ~Component()
+			this->parent_ = parent;
+		}
+
+
+		void AddComponent(Component* component)
+		{
+			component->SetParent(this);
+
+			components_.Add(component);
+		}
+
+		template<class T>
+		T* GetComponent()
+		{
+			T* component;
+
+			for (unsigned int i = 0; i < components_.Count(); i++)
 			{
-				//delete parent_;
-			}
-
-			Component* GetParent() const
-			{
-				return parent_;
-			}
-			void SetParent(Component* parent)
-			{
-				//TODO: Maybe remove itself from current parent first? (if there is one)
-
-				this->parent_ = parent;
-			}
-
-
-			void AddComponent(Component* component)
-			{
-				component->SetParent(this);
-
-				components_.Add(component);
-			}
-
-			template<class T>
-			T* GetComponent()
-			{
-				T* component;
-
-				for (unsigned int i = 0; i < components_.Count(); i++)
+				if ((component = dynamic_cast<T*>(components_[i])))
 				{
-					if ((component = dynamic_cast<T*>(components_[i])))
-					{
-						return component;
-					}
+					return component;
 				}
-
-				return nullptr;
 			}
 
-			private:
-			Component* parent_ = nullptr;
-			Types::List<Component*> components_ = *new Types::List<Component*>();
-		};
-	}
+			return nullptr;
+		}
+
+	private:
+		Component* parent_ = nullptr;
+		Types::List<Component*> components_ = *new Types::List<Component*>();
+	};
 }

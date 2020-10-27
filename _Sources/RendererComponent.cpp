@@ -29,7 +29,7 @@ namespace Engine
 
 				Surface* window = draw_camera->GetWindow();
 
-				const vec2 screen_pos = draw_camera->WorldToScreen(GetTransform()->GetPixelPos());
+				const vec2 screen_pos = draw_camera->ConvertWorldToScreen(GetTransform()->GetPositionUnits()) * MathUtilities::UNITS_TO_PIXELS;
 
 				sprite->Draw(window,
 					static_cast<int>(screen_pos.x),
@@ -48,17 +48,14 @@ namespace Engine
 		{
 			if (transform_)
 			{
-				//printf("GetTransform 1");
 				return transform_;
 			}
-
 			if ((transform_ = GetParent()->GetComponent<TransformComponent>()))
 			{
-				//printf("GetTransform 2");
 				return transform_;
 			}
 
-			//printf("No Transform attached to Renderer's GameObject!");
+			printf("Warning: No Transform attached to Renderer's GameObject!");
 
 			return nullptr;
 		}

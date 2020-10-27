@@ -4,7 +4,7 @@
 #include <surface.h>
 
 #include <Behaviour.h>
-using Engine::Components::Behaviour;
+using Engine::Behaviour;
 
 #include <TransformComponent.h>
 using Engine::Components::TransformComponent;
@@ -14,7 +14,7 @@ using Tmpl8::Surface;
 
 namespace Engine
 {
-	namespace Components
+	namespace Prefabs
 	{
 
 		class Camera final : public Component
@@ -23,8 +23,7 @@ namespace Engine
 			explicit Camera(Surface* window);
 			Camera(int window_width, int window_height);
 
-			//TransformComponent* Transform() const;
-
+			TransformComponent* GetTransform() const;
 
 			Surface* GetWindow() const;
 			void SetWindow(Surface* window);
@@ -33,8 +32,22 @@ namespace Engine
 			void SetCameraPosition(float x, float y) const;
 			void SetCameraPosition(vec2 pos) const;
 
-			vec2 WorldToScreen(const vec2& world_pos) const;
-			vec2 ScreenToWorld(const vec2& screen_pos) const;
+			/*!
+			 *  Converts a world-relative position to a screen-relative position.
+			 *
+			 *      @param [in] world_relative_pos: world-relative position IN UNITS.
+			 *
+			 *      @return screen_relative_pos: screen-relative position IN UNITS
+			 */
+			vec2 ConvertWorldToScreen(const vec2& world_relative_pos) const;
+			/*!
+			 *  Converts a screen-relative position to a world-relative position.
+			 *
+			 *      @param [in] screen_relative_pos: screen-relative position IN UNITS.
+			 *
+			 *      @return world_relative_pos: world-relative position IN UNITS
+			 */
+			vec2 ConvertScreenToWorld(const vec2& screen_relative_pos) const;
 
 			//bool IsOnScreen(RendererComponent* renderer) const;
 
