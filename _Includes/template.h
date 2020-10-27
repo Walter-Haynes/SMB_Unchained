@@ -3,7 +3,6 @@
 
 #pragma once
 
-#define TEMPLATE_VERSION	"Template_v2017.01"
 
 inline float Rand( float range ) { return ((float)rand() / RAND_MAX) * range; }
 inline int IRand( int range ) { return rand() % range; }

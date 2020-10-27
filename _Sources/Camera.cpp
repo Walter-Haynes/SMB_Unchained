@@ -4,7 +4,7 @@
 
 namespace Engine
 {
-	namespace Components
+	namespace Prefabs
 	{
 		Camera::Camera(Surface* window)
 		{
@@ -30,6 +30,12 @@ namespace Engine
 		}
 
 
+		TransformComponent* Camera::GetTransform() const
+		{
+			return transform_;
+		}
+		
+		
 		Surface* Camera::GetWindow() const
 		{
 			return window_;
@@ -53,13 +59,13 @@ namespace Engine
 			transform_->position = pos;
 		}
 
-		vec2 Camera::WorldToScreen(const vec2& world_pos) const
+		vec2 Camera::ConvertWorldToScreen(const vec2& world_relative_pos) const
 		{
-			return world_pos - this->GetCameraPosition();
+			return world_relative_pos - this->GetCameraPosition();
 		}
-		vec2 Camera::ScreenToWorld(const vec2& screen_pos) const
+		vec2 Camera::ConvertScreenToWorld(const vec2& screen_relative_pos) const
 		{
-			return screen_pos + this->GetCameraPosition();
+			return screen_relative_pos + this->GetCameraPosition();
 		}
 
 		/*

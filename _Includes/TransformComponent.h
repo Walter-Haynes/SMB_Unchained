@@ -16,7 +16,6 @@ namespace Engine
 		{
 		public:
 			vec2 position;
-			float rotation = 0;
 		
 			vec2 velocity = *new vec2(0, 0);
 
@@ -24,24 +23,13 @@ namespace Engine
 			{ }
 			virtual ~TransformComponent() = default;
 
-			vec2 GetPixelPos() const;
+			vec2 GetPositionPixels() const;
+			vec2 GetPositionUnits() const; //just for ease of use, you can do it directly via position as well.
 
-			vec2 GetDirection() const;
+			void Update();
 
-			/*
-			vec2 GetScreenPosition()
-			{
-				//return Managers::RenderManager::Instance()->WorldToScreen(position);
-			}
-			
-			vec2 GetWorldPosition() const
-			{
-				return position;
-			}
-			*/
-
-		private:
-			vec2 direction_ = *new vec2(0, 0);
+			void Translate(vec2 translation);
+			void Translate(float x, float y);
 		};
 
 	}
