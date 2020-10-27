@@ -12,7 +12,8 @@
 #pragma warning (disable : 4311) // pointer truncation from HANDLE to long
 #endif
 
-#include "game.h"
+#include <SuperMarioBros.h>
+using Game::SuperMarioBros;
 
 #include <fcntl.h>
 #include <io.h>
@@ -78,7 +79,7 @@ mat4 mat4::rotatez( const float a )
 
 void NotifyUser( char* s )
 {
-	HWND hApp = FindWindow( NULL, TEMPLATE_VERSION );
+	HWND hApp = FindWindow( NULL, Game::GAME_NAME);
 	MessageBox( hApp, s, "ERROR", MB_OK );
 	exit( 0 );
 }
@@ -107,7 +108,7 @@ int ACTWIDTH, ACTHEIGHT;
 static bool firstframe = true;
 
 Surface* surface = 0;
-Game* game = 0;
+SuperMarioBros* game = 0;
 SDL_Window* window = 0;
 
 #ifdef _MSC_VER
@@ -235,18 +236,18 @@ int main( int argc, char **argv )
 	SDL_Init( SDL_INIT_VIDEO );
 #ifdef ADVANCEDGL
 #ifdef FULLSCREEN
-	window = SDL_CreateWindow( TEMPLATE_VERSION, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_FULLSCREEN|SDL_WINDOW_OPENGL );
+	window = SDL_CreateWindow(Game::GAME_NAME, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_FULLSCREEN|SDL_WINDOW_OPENGL );
 #else
-	window = SDL_CreateWindow( TEMPLATE_VERSION, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_SHOWN|SDL_WINDOW_OPENGL );
+	window = SDL_CreateWindow(Game::GAME_NAME, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_SHOWN|SDL_WINDOW_OPENGL );
 #endif
 	SDL_GLContext glContext = SDL_GL_CreateContext( window);
 	init();
 	ShowCursor( false );
 #else
 #ifdef FULLSCREEN
-	window = SDL_CreateWindow( TEMPLATE_VERSION, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_FULLSCREEN );
+	window = SDL_CreateWindow(Game::GAME_NAME, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_FULLSCREEN );
 #else
-	window = SDL_CreateWindow( TEMPLATE_VERSION, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_SHOWN );
+	window = SDL_CreateWindow(Game::GAME_NAME, 100, 100, SCRWIDTH, SCRHEIGHT, SDL_WINDOW_SHOWN );
 #endif
 	surface = new Surface( SCRWIDTH, SCRHEIGHT );
 	surface->Clear( 0 );
@@ -254,8 +255,8 @@ int main( int argc, char **argv )
 	SDL_Texture* frameBuffer = SDL_CreateTexture( renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, SCRWIDTH, SCRHEIGHT );
 #endif
 	int exitapp = 0;
-	game = new Game();
-	game->SetTarget( surface );
+	game = new SuperMarioBros();
+	game->SetupCamera(surface);
 	timer t;
 	t.reset();
 	while (!exitapp) 
@@ -286,12 +287,21 @@ int main( int argc, char **argv )
 	#endif
 		if (firstframe)
 		{
-			game->Init();
+			game->Start();
 			firstframe = false;
 		}
 		// calculate frame time and pass it to game->Tick
-		game->Tick( t.elapsed() );
+		SuperMarioBros::Time()->SetDeltaTime(t.elapsed() );
+		game->Update();
+		
 		t.reset();
+
+
+		int x, y;
+		SDL_GetMouseState(&x, &y);
+
+		SuperMarioBros::Input()->SetMousePosition(*new vec2(x, y));
+		
 		// event loop
 		SDL_Event event;
 		while (SDL_PollEvent( &event )) 
@@ -307,11 +317,12 @@ int main( int argc, char **argv )
 					exitapp = 1;
 					// find other keys here: http://sdl.beuc.net/sdl.wiki/SDLKey
 				}
-				game->KeyDown( event.key.keysym.scancode );
+				SuperMarioBros::Input()->SetKeyDown(event.key.keysym.scancode);
 				break;
 			case SDL_KEYUP:
-				game->KeyUp( event.key.keysym.scancode );
+				SuperMarioBros::Input()->SetKeyUp(event.key.keysym.scancode);
 				break;
+			/*
 			case SDL_MOUSEMOTION:
 				game->MouseMove( event.motion.xrel, event.motion.yrel );
 				break;
@@ -321,12 +332,14 @@ int main( int argc, char **argv )
 			case SDL_MOUSEBUTTONDOWN:
 				game->MouseDown( event.button.button );
 				break;
+			*/
 			default:
 				break;
 			}
 		}
 	}
-	game->Shutdown();
+	
+	game->Stop();
 	SDL_Quit();
 	return 1;
 }

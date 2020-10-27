@@ -8,14 +8,40 @@ namespace Engine
 {
 	namespace Components
 	{
-		vec2 TransformComponent::GetPixelPos() const
+		vec2 TransformComponent::GetPositionPixels() const
 		{
-			return position * Core::PIXELS_PER_UNIT;
+			return position * PIXELS_PER_UNIT;
+		}
+		vec2 TransformComponent::GetPositionUnits() const
+		{
+			return position;
 		}
 
-		vec2 TransformComponent::GetDirection() const
+		void TransformComponent::Update()
 		{
-			return direction_;
+			position += velocity;
 		}
+
+		/*!
+		 *  Translates the transform component.
+		 *
+		 *      @param [in] translation: The translation IN UNITS PER FRAME
+		 */
+		void TransformComponent::Translate(const vec2 translation)
+		{
+			position += translation;
+		}
+		/*!
+		 *  Translates the transform component.
+		 *
+		 *      @param [in] x: Horizontal translation IN UNITS PER FRAME
+		 *      @param [in] y: Vertical translation IN UNITS PER FRAME
+		 */
+		void TransformComponent::Translate(const float x, const float y)
+		{
+			position.x += x;
+			position.y += y;
+		}
+		
 	}
 }

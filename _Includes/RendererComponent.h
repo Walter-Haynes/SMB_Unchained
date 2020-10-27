@@ -5,7 +5,7 @@
 #include <Instancer.h>
 
 #include <Camera.h>
-using Engine::Components::Camera;
+using Engine::Prefabs::Camera;
 
 using Tmpl8::Sprite;
 using Tmpl8::Surface;

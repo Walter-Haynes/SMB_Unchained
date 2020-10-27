@@ -1,7 +1,13 @@
 // add your external includes to this file instead of to individual .cpp files
 
-#define SCRWIDTH		800
-#define SCRHEIGHT		512
+#include <GameSettings.h>
+
+//#define SCRWIDTH		 Game::SCREEN_HEIGHT_PIXELS;
+//#define SCRHEIGHT		 Game::SCREEN_WIDTH_PIXELS;
+
+constexpr int SCRWIDTH  = Game::SCREEN_WIDTH_PIXELS;
+constexpr int SCRHEIGHT = Game::SCREEN_HEIGHT_PIXELS;
+
 // #define FULLSCREEN
 #define ADVANCEDGL	// faster if your system supports it
 

@@ -35,14 +35,14 @@ namespace Engine
 			return true;
 		}
 
-		vec2 RenderManager::WorldToScreen(const vec2& world_pos) const
+		vec2 RenderManager::ConvertWorldToScreen(const vec2& world_relative_pos) const
 		{
-			return main_camera_->WorldToScreen(world_pos);
+			return main_camera_->ConvertWorldToScreen(world_relative_pos);
 		}
 
-		vec2 RenderManager::ScreenToWorld(const vec2& screen_pos) const
+		vec2 RenderManager::ConvertScreenToWorld(const vec2& screen_relative_pos) const
 		{
-			return main_camera_->ScreenToWorld(screen_pos);
+			return main_camera_->ConvertScreenToWorld(screen_relative_pos);
 		}
 	}
 }
