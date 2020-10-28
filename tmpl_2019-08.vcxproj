@@ -255,6 +255,7 @@
     <ClInclude Include="_Includes\GoombaActor.h" />
     <ClInclude Include="_Includes\Pickup.h" />
     <ClInclude Include="_Includes\BrickTile.h" />
+    <ClInclude Include="_Includes\PowerTile.h" />
     <ClInclude Include="_Includes\SurfaceTile.h" />
     <ClInclude Include="_Includes\PlayerActor.h" />
     <ClInclude Include="_Includes\Actor.h" />

@@ -39,6 +39,12 @@ namespace Engine
 			if (val < 0) return -1;
 			return 0;
 		}
+		inline float SignF(const float val)
+		{
+			if (val > 0) return 1;
+			if (val < 0) return -1;
+			return 0;
+		}
 
 		inline float Clamp(float value, const float min, const float max)
 		{

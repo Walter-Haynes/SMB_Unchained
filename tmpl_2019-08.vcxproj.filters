@@ -162,6 +162,9 @@
     <ClInclude Include="_Includes\GoombaActor.h">
       <Filter>Game Code\Prefabs\Actors</Filter>
     </ClInclude>
+    <ClInclude Include="_Includes\PowerTile.h">
+      <Filter>Game Code\Prefabs\Tiles</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Template Code">

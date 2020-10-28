@@ -2,6 +2,8 @@
 
 #include "PlayerActor.h"
 
+
+#include <iostream>
 #include <MathUtilities.h>
 using namespace Engine::MathUtilities;
 
@@ -34,6 +36,8 @@ namespace Game
 				//ground_check_collider_->DebugBounds(IsGrounded() ? 0x00FFFF : 0xFF0000);
 
 				transform_->Translate(internal_velocity_ * DeltaTime());
+
+				ResolveIntersects();
 			}
 
 			bool PlayerActor::IsGrounded() const
@@ -52,11 +56,46 @@ namespace Game
 					//return true if the collider we're checking against collides with the player's "ground check collider".
 					if(ground_check_collider_->CollidesWith(check_against)) 
 					{
-						return true;
+						ColliderComponent::Hit2D* hit = collider_->Intersects(check_against);
+
+						//Only grounded if the normal points upwards.
+						if (hit->normal.y == 1)
+						{
+							return true;
+						}
 					}
 				}
 
 				return false;
+			}
+
+			PlayerActor::Collisions* PlayerActor::CheckCollision()
+			{
+				auto collisions = new Collisions();
+				
+				//Doesn't particularly scale well, but people keep telling me to KISS, so I WILL.
+				for (int i = 0; i < ColliderComponent::GetCount(); ++i)
+				{
+					ColliderComponent* check_against = ColliderComponent::GetInstance(i);
+
+					//TODO: Check based on tags / collision matrix.
+
+					//Skip own colliders.
+					if (check_against == this->collider_) continue;
+					
+					if (check_against == this->ground_check_collider_) continue;
+
+					//return true if the collider we're checking against collides with the player's "ground check collider".
+					if (collider_->CollidesWith(check_against))
+					{
+						//TODO: Get collision point from colliders.
+
+						
+						//return true;
+					}
+				}
+
+				return collisions;
 			}
 
 			void PlayerActor::Walk()
@@ -114,6 +153,44 @@ namespace Game
 
 			void PlayerActor::ResolveIntersects()
 			{
+				for (int i = 0; i < ColliderComponent::GetCount(); ++i)
+				{
+					ColliderComponent* check_against = ColliderComponent::GetInstance(i);
+
+					//TODO: Check based on tags / collision matrix.
+
+					//Skip own colliders.
+					if (check_against == this->collider_) continue;
+
+					if (check_against == this->ground_check_collider_) continue;
+
+					//return true if the collider we're checking against collides with the player's "ground check collider".
+					if (collider_->CollidesWith(check_against))
+					{
+						//TODO: Get collision point from colliders.
+
+						ColliderComponent::Hit2D* hit = collider_->Intersects(check_against);
+
+						if(hit)
+						{	
+							if(hit->normal.x == 1)
+							{
+								std::cout << hit->normal.x << ' ' << hit->normal.y << std::endl;
+
+								//transform_->position += hit->delta;
+							}
+
+							const vec2 start_pos = Engine::Managers::RenderManager::Instance()->ConvertWorldToScreen(hit->contact * UNITS_TO_PIXELS);
+
+							const vec2 end_pos = Engine::Managers::RenderManager::Instance()->ConvertWorldToScreen((hit->contact + hit->normal) * UNITS_TO_PIXELS);
+
+							Engine::Managers::RenderManager::Instance()->GetMainCamera()->GetWindow()->Bar(start_pos.x, start_pos.y, end_pos.x, end_pos.y, 0xFFFFFFF);
+						}
+
+						//return true;
+					}
+				}
+				
 				//(Angle(colliderDistance.normal, *new vec2(0, -1));
 
 				
