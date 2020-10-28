@@ -39,9 +39,11 @@ namespace Game
 					//TODO: Spawn Pickup if there is one.
 
 					//TODO: Remove Pickup from list.
+
+					//Check if Mario big, destroy tile.
 					
                                     
-
+					/*
                                     if (spawn)
                                     {
 							// Spawn what's in the container 
@@ -67,7 +69,7 @@ namespace Game
                                                 Destroy(gameObject);
                                           }
                                     }
-                              }
+                              */
 				}
 			};
 		}
