@@ -30,6 +30,7 @@ namespace Engine
 
 			void Translate(vec2 translation);
 			void Translate(float x, float y);
+			
 		};
 
 	}

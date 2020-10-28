@@ -37,7 +37,7 @@ namespace Game
 
 				float jump_height_ = 40.0f;
 
-				vec2 internal_velocity_;
+				//vec2 internal_velocity_;
 
 				ColliderComponent* ground_check_collider_;
 

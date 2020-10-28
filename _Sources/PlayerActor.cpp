@@ -27,7 +27,8 @@ namespace Game
 
 				//Special
 
-				internal_velocity_.y += 100 * DeltaTime();
+				//Gravity
+				transform_->velocity.y += 100 * DeltaTime();
 				
 				Jump();
 				
@@ -35,7 +36,8 @@ namespace Game
 
 				//ground_check_collider_->DebugBounds(IsGrounded() ? 0x00FFFF : 0xFF0000);
 
-				transform_->Translate(internal_velocity_ * DeltaTime());
+				//transform_->Translate(transform_->velocity * DeltaTime());
+				transform_->Update();
 
 				ResolveIntersects();
 			}
@@ -112,13 +114,13 @@ namespace Game
 
 				if(!IsZero(input_dir)) //If there is Input, accelerate, else decelerate.
 				{
-					internal_velocity_.x = MoveTowards(internal_velocity_.x, max_speed_ * input_dir, acceleration * DeltaTime());
+					transform_->velocity.x = MoveTowards(transform_->velocity.x, max_speed_ * input_dir, acceleration * DeltaTime());
 				}
 				else
 				{
 					//TODO: See if you have to decelerate in air as well.
 					
-					internal_velocity_.x = MoveTowards(internal_velocity_.x, 0, ground_deceleration_ * DeltaTime());
+					transform_->velocity.x = MoveTowards(transform_->velocity.x, 0, ground_deceleration_ * DeltaTime());
 				}
 			}
 
@@ -126,11 +128,11 @@ namespace Game
 			{
 				if(!IsGrounded()) return;
 				
-				internal_velocity_.y = 0;
+				transform_->velocity.y = 0;
 
 				if(Input()->GetKeyDown("Up"))
 				{
-					internal_velocity_.y = -sqrt(2 * jump_height_ * abs(gravity_));
+					transform_->velocity.y = -sqrt(2 * jump_height_ * abs(gravity_));
 				}
 
 				/*
@@ -184,30 +186,31 @@ namespace Game
 								transform_->Translate(0, -hit->delta.y);
 							}
 
+							//If we hit a wall on the left
 							if(hit->normal.x == -1 && hit->delta.length() > 1.5f)
 							{
-								//std::cout << "LEFT  = " << hit->delta.length() << std::endl;
 								std::cout << "LEFT  = " << hit->delta.x << std::endl;
-								//transform_->Translate(-hit->delta.x - 1, 0);
+								
+								//Stop movement in that direction.
+								transform_->velocity.x = 0;
 
+								//Translate out of that spot.
 								transform_->position.x -= (hit->delta.x + 1);
 							}
 							if(hit->normal.x == 1 && hit->delta.length() > 1.5f)
 							{
-								//std::cout << "RIGHT = " << hit->delta.length() << std::endl;
 								std::cout << "RIGHT  = " << hit->delta.x << std::endl;
-								//transform_->Translate(-hit->delta.x - 1, 0);
 
+								//Stop movement in that direction.
+								transform_->velocity.x = 0;
+								
+								//Translate out of that spot.
 								transform_->position.x -= (hit->delta.x - 1);
+								
 							}
-							
+
 							/*
-							if(!IsZero(hit->normal.y))
-							{
-								transform_->velocity.y = 0;
-							}
-							
-							if(!IsZero(hit->normal.y))
+							if(!IsZero(hit->normal.x))
 							{
 								transform_->velocity.x = 0;
 							}
