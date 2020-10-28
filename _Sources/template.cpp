@@ -226,7 +226,6 @@ void swap()
 }
 
 #endif
-
 int main( int argc, char **argv ) 
 {  
 #ifdef _MSC_VER
@@ -257,10 +256,17 @@ int main( int argc, char **argv )
 	int exitapp = 0;
 	game = new SuperMarioBros();
 	game->SetupCamera(surface);
+	
 	timer t;
+	float delta_time = 0.001f;
+
+	//TODO: Maybe remove this reset?
 	t.reset();
+	
 	while (!exitapp) 
 	{
+		t.reset();
+		
 	#ifdef ADVANCEDGL
 		swap();
 		surface->SetBuffer( (Pixel*)framedata );
@@ -291,11 +297,10 @@ int main( int argc, char **argv )
 			firstframe = false;
 		}
 		// calculate frame time and pass it to game->Tick
-		SuperMarioBros::Time()->SetDeltaTime(t.elapsed() );
+		SuperMarioBros::Time()->SetDeltaTime(delta_time);
 		game->Update();
 		
-		t.reset();
-
+		//t.reset();
 
 		int x, y;
 		SDL_GetMouseState(&x, &y);
@@ -322,21 +327,12 @@ int main( int argc, char **argv )
 			case SDL_KEYUP:
 				SuperMarioBros::Input()->SetKeyUp(event.key.keysym.scancode);
 				break;
-			/*
-			case SDL_MOUSEMOTION:
-				game->MouseMove( event.motion.xrel, event.motion.yrel );
-				break;
-			case SDL_MOUSEBUTTONUP:
-				game->MouseUp( event.button.button );
-				break;
-			case SDL_MOUSEBUTTONDOWN:
-				game->MouseDown( event.button.button );
-				break;
-			*/
 			default:
 				break;
 			}
 		}
+
+		delta_time = t.elapsed();
 	}
 	
 	game->Stop();
