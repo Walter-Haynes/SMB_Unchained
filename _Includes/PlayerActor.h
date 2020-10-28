@@ -35,7 +35,7 @@ namespace Game
 				float ground_walk_acceleration_ = 60.0f, ground_run_acceleration_ = 150.0f,  air_acceleration_ = 30.0f;
 				float ground_deceleration_ = 50;
 
-				float jump_height_ = 30.0f;
+				float jump_height_ = 40.0f;
 
 				vec2 internal_velocity_;
 
@@ -47,6 +47,9 @@ namespace Game
 				void Walk();
 				void Jump();
 
+				/*!
+				 *  Pushes the player's collider out of collider's it's intersecting with.
+				 */
 				void ResolveIntersects();
 
 				/*!

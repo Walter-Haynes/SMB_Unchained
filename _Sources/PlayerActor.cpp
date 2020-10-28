@@ -100,6 +100,8 @@ namespace Game
 
 			void PlayerActor::Walk()
 			{
+				//TODO: Player states, Ground_Walk, Ground_Idle, Jump etc (use for animation) bitflags for Left/Right also please thank you.
+				
 				const float acceleration = IsGrounded()
 									? Input()->GetKeyDown("Special") ? ground_run_acceleration_ : ground_walk_acceleration_ //Different speed based on whether we're sprinting or not.
 									: air_acceleration_; //Different speed if we're not grounded.
@@ -172,19 +174,57 @@ namespace Game
 						ColliderComponent::Hit2D* hit = collider_->Intersects(check_against);
 
 						if(hit)
-						{	
-							if(hit->normal.x == 1)
+						{
+							if(hit->normal.y == -1)
 							{
-								std::cout << hit->normal.x << ' ' << hit->normal.y << std::endl;
+								//std::cout << hit->normal.x << ' ' << hit->normal.y << std::endl;
 
-								//transform_->position += hit->delta;
+								//transform_->position -= hit->delta; // * DeltaTime();
+
+								transform_->Translate(0, -hit->delta.y);
 							}
 
-							const vec2 start_pos = Engine::Managers::RenderManager::Instance()->ConvertWorldToScreen(hit->contact * UNITS_TO_PIXELS);
+							if(hit->normal.x == -1 && hit->delta.length() > 1.5f)
+							{
+								//std::cout << "LEFT  = " << hit->delta.length() << std::endl;
+								std::cout << "LEFT  = " << hit->delta.x << std::endl;
+								//transform_->Translate(-hit->delta.x - 1, 0);
 
-							const vec2 end_pos = Engine::Managers::RenderManager::Instance()->ConvertWorldToScreen((hit->contact + hit->normal) * UNITS_TO_PIXELS);
+								transform_->position.x -= (hit->delta.x + 1);
+							}
+							if(hit->normal.x == 1 && hit->delta.length() > 1.5f)
+							{
+								//std::cout << "RIGHT = " << hit->delta.length() << std::endl;
+								std::cout << "RIGHT  = " << hit->delta.x << std::endl;
+								//transform_->Translate(-hit->delta.x - 1, 0);
 
-							Engine::Managers::RenderManager::Instance()->GetMainCamera()->GetWindow()->Bar(start_pos.x, start_pos.y, end_pos.x, end_pos.y, 0xFFFFFFF);
+								transform_->position.x -= (hit->delta.x - 1);
+							}
+							
+							/*
+							if(!IsZero(hit->normal.y))
+							{
+								transform_->velocity.y = 0;
+							}
+							
+							if(!IsZero(hit->normal.y))
+							{
+								transform_->velocity.x = 0;
+							}
+							*/
+
+							//Debug Collisions
+							check_against->DebugBounds(0xF00FFFF);
+
+							const vec2 end_screen_pos = Engine::Managers::RenderManager::Instance()->ConvertWorldToScreen(hit->contact - hit->delta) * UNITS_TO_PIXELS;
+
+							Engine::Managers::RenderManager::Instance()->GetMainCamera()->GetWindow()->Box(
+								static_cast<int>(end_screen_pos.x) - 2,
+								static_cast<int>(end_screen_pos.y) + 2,
+								static_cast<int>(end_screen_pos.x) + 2,
+								static_cast<int>(end_screen_pos.y) - 2, 0x00FFFFF);
+
+							//TODO: Only Save Grounding after resolving collisions.
 						}
 
 						//return true;
@@ -197,7 +237,7 @@ namespace Game
 				//Detect colliders in players Collider
 
 				//foreach(intersecting_collider in intersections)
-				{
+				//{
 					//if(intersecting_collider == this->collider_) continue; //Skip self
 
 					//ColliderDistance colliderDistance = intersecting_collider.Distance(this->collider_);
@@ -208,7 +248,7 @@ namespace Game
 						Translate(colliderDistance.resolve_direction);
 					}
 					*/
-				}
+				//}
 			}
 		}
 	}
