@@ -17,7 +17,6 @@ namespace Game
 			{
 				AddComponent(ground_check_collider_ = new ColliderComponent());
 				ground_check_collider_->bounds = *new vec2(1.0f, 1.0f);
-				
 				//ground_check_collider_->offset = *new vec2(0, 0.25f);
 			}
 
@@ -114,10 +113,10 @@ namespace Game
 				//TODO: Player states, Ground_Walk, Ground_Idle, Jump etc (use for animation) bitflags for Left/Right also please thank you.
 				
 				const float acceleration = is_grounded_
-									? Input()->GetKeyDown("Special") ? ground_run_acceleration_ : ground_walk_acceleration_ //Different speed based on whether we're sprinting or not.
+									? Input()->GetKey("Special") ? ground_run_acceleration_ : ground_walk_acceleration_ //Different speed based on whether we're sprinting or not.
 									: air_acceleration_; //Different speed if we're not grounded.
 
-				const float input_dir = (Input()->GetKeyDown("Right") - Input()->GetKeyDown("Left")); //left = -1, right = +1, left+right = 0, none = 0
+				const float input_dir = (Input()->GetKey("Right") - Input()->GetKey("Left")); //left = -1, right = +1, left+right = 0, none = 0
 
 				//TODO: Maybe also check wall collisions in here?
 
@@ -186,11 +185,17 @@ namespace Game
 
 						if(hit)
 						{
-							if(hit->normal.y == -1)
+							if(Equals(hit->normal.y, 1)) //Down
+							{
+								transform_->velocity.y = 0;
+							}
+							if (Equals(hit->normal.y, -1)) //Up
 							{
 								//std::cout << hit->normal.x << ' ' << hit->normal.y << std::endl;
 
 								//transform_->position -= hit->delta; // * DeltaTime();
+
+								transform_->velocity.y = 0;
 
 								transform_->Translate(0, -hit->delta.y);
 							}

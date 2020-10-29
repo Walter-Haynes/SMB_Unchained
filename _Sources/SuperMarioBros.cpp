@@ -54,7 +54,7 @@ namespace Game
 		SetupInputs();
 		SetupWorld();
 
-		power_tile_test_->GetTransform()->position = *new vec2(5, -3);
+		power_tile_test_->GetTransform()->position = *new vec2(4, -3);
 
 		player_actor_->Start();
 		player_actor_->GetTransform()->position = *new vec2(1, -1);
