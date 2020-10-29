@@ -136,25 +136,6 @@ namespace Game
 				{
 					transform_->velocity.y = -sqrt(2 * jump_height_ * abs(Gravity()));
 				}
-
-				/*
-				if (Input()->jump.is_pressed)
-				{
-					//_jump_charge_timer += delta_time;
-					//charging_ = true;
-
-				}
-				*/
-				//else if(charging_)
-				//{
-					//charging_ = false;
-
-					//Animate
-					//Play Sound
-
-					//Add Jump Force
-				//}
-
 			}
 
 			void PlayerActor::ResolveIntersects()
@@ -180,15 +161,11 @@ namespace Game
 						if(hit)
 						{
 							if(Equals(hit->normal.y, 1)) //Down
-							{
-								//std::cout << "D" << std::endl;
-								
+							{	
 								transform_->velocity.y = 0;
 							}
 							if(Equals(hit->normal.y, -1)) //Up
 							{
-								//std::cout << "U" << std::endl;
-								
 								transform_->velocity.y = 0;
 
 								transform_->position.y -= hit->delta.y + 1;
@@ -196,37 +173,24 @@ namespace Game
 
 							//Bug: We check the delta with horizontal checks for now (hit->delta.length() > 1.1f)
 							//	 This is a hack, I'm doing it for now as I'm having issues with left/right collision when walking over gaps in tiles.
-							//	 
-							// If we hit a wall on the left.
-							if(Equals(hit->normal.x, -1) && hit->delta.x < -1.1f)
-							{
-								//std::cout << "LEFT  = " << hit->delta.x << std::endl;
-								
+							
+							
+							if(Equals(hit->normal.x, -1) && hit->delta.x < -1.1f) //Left
+							{	
 								//Stop movement in that direction.
 								transform_->velocity.x = 0;
 
 								//Translate out of the intersect.
 								transform_->position.x -= (hit->delta.x + 1);
 							}
-							// If we hit a wall on the right.
-							if(Equals(hit->normal.x, 1) && hit->delta.x > 1.1f)
+							if(Equals(hit->normal.x, 1) && hit->delta.x > 1.1f) //Right
 							{
-								//std::cout << "RIGHT  = " << hit->delta.x << std::endl;
-
 								//Stop movement in that direction.
 								transform_->velocity.x = 0;
 								
 								//Translate out of the intersect.
 								transform_->position.x -= (hit->delta.x - 1);
 							}
-							
-
-							/*
-							if(!IsZero(hit->normal.x))
-							{
-								transform_->velocity.x = 0;
-							}
-							*/
 
 							//Debug Collisions
 							check_against->DebugBounds(0xF00FFFF);
@@ -241,29 +205,8 @@ namespace Game
 
 							//TODO: Only Save Grounding after resolving collisions.
 						}
-
-						//return true;
 					}
 				}
-				
-				//(Angle(colliderDistance.normal, *new vec2(0, -1));
-
-				
-				//Detect colliders in players Collider
-
-				//foreach(intersecting_collider in intersections)
-				//{
-					//if(intersecting_collider == this->collider_) continue; //Skip self
-
-					//ColliderDistance colliderDistance = intersecting_collider.Distance(this->collider_);
-
-					/*
-					if (colliderDistance.isOverlapped)
-					{
-						Translate(colliderDistance.resolve_direction);
-					}
-					*/
-				//}
 			}
 
 		}

@@ -23,7 +23,7 @@ namespace Engine
 				vec2 normal;
 			};
 			
-			vec2 bounds;
+			vec2 bounds = *new vec2(1,1);
 			vec2 offset;
 
 			vec2* GetExtends()
@@ -62,38 +62,6 @@ namespace Engine
 			vec2 Centre();
 
 			vec2 OffsetCentre();
-
-			/*
-			 *   public intersectAABB(box: AABB): Hit | null {
-    const dx = other.pos.x - this.pos.x;
-    const px = (other.half.x + this.half.x) - abs(dx);
-    if (px <= 0) {
-      return null;
-    }
-
-    const dy = other.pos.y - this.pos.y;
-    const py = (other.half.y + this.half.y) - abs(dy);
-    if (py <= 0) {
-      return null;
-    }
-
-    const hit = new Hit(this);
-    if (px < py) {
-      const sx = sign(dx);
-      hit.delta.x = px * sx;
-      hit.normal.x = sx;
-      hit.pos.x = this.pos.x + (this.half.x * sx);
-      hit.pos.y = other.pos.y;
-    } else {
-      const sy = sign(dy);
-      hit.delta.y = py * sy;
-      hit.normal.y = sy;
-      hit.pos.x = other.pos.x;
-      hit.pos.y = this.pos.y + (this.half.y * sy);
-    }
-    return hit;
-  }
-			 */
 		};
 	}
 }

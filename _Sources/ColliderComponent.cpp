@@ -24,8 +24,12 @@ namespace Engine
 				this->OffsetCentre().y < other->OffsetCentre().y + other->bounds.y);  //Vertical
 		}
 
+
+		//Made using help from https://noonat.github.io/intersect/#aabb-vs-aabb
 		ColliderComponent::Hit2D* ColliderComponent::Intersects(ColliderComponent* other)
 		{
+			//TODO: Maybe a built in intersection resolve method, with options like for preferring horizontal or vertical, or whether it should bounce/slide etc
+			
 			const float dx = other->OffsetCentre().x - this->OffsetCentre().x;
 			const float px = (other->bounds.x + this->bounds.x) - abs(dx);
 			
@@ -42,7 +46,7 @@ namespace Engine
 				return nullptr;
 			}
 
-			Hit2D* hit = new Hit2D();
+			auto* const hit = new Hit2D();
 			if (px < py) //Horizontal
 			{
 				const float sx = MathUtilities::SignF(dx);
