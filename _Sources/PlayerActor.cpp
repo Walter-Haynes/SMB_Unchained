@@ -17,17 +17,14 @@ namespace Game
 			{
 				AddComponent(ground_check_collider_ = new ColliderComponent());
 				ground_check_collider_->bounds = *new vec2(1.0f, 1.0f);
-				//ground_check_collider_->offset = *new vec2(0, 0.25f);
+				//ground_check_collider_->offset = *new vec2(0, 0.25f); //a way to check for ground even when Mario is a little bit above the ground.
 			}
 
 			void PlayerActor::Update()
 			{
-				//TODO: Check Player State / fire mario for run speed (as bit flags)
+				//TODO: Check Player State / if he's fire mario for run speed (as bit flags)
 
 				//Special
-
-				//Gravity
-				//transform_->velocity.y += Gravity() * DeltaTime();
 
 				ApplyGravity();
 				
@@ -35,9 +32,6 @@ namespace Game
 				
 				Walk();
 
-				//ground_check_collider_->DebugBounds(CheckIsGrounded() ? 0x00FFFF : 0xFF0000);
-
-				//transform_->Translate(transform_->velocity * DeltaTime());
 				transform_->Update();
 
 				ResolveIntersects();
@@ -69,7 +63,7 @@ namespace Game
 						ColliderComponent::Hit2D* hit = collider_->Intersects(check_against);
 
 						//Only grounded if the normal points upwards.
-						if (hit->normal.y == 1)
+						if (Equals(hit->normal.y, 1))
 						{
 							return true;
 						}
@@ -187,35 +181,26 @@ namespace Game
 						{
 							if(Equals(hit->normal.y, 1)) //Down
 							{
+								//std::cout << "D" << std::endl;
+								
 								transform_->velocity.y = 0;
 							}
-							if (Equals(hit->normal.y, -1)) //Up
+							if(Equals(hit->normal.y, -1)) //Up
 							{
-								//std::cout << hit->normal.x << ' ' << hit->normal.y << std::endl;
-
-								//transform_->position -= hit->delta; // * DeltaTime();
-
+								//std::cout << "U" << std::endl;
+								
 								transform_->velocity.y = 0;
 
-								transform_->Translate(0, -hit->delta.y);
+								transform_->position.y -= hit->delta.y + 1;
 							}
 
-							/*
-							//If we hit a wall on the left
-							if((Equals(hit->normal.x, -1) || Equals(hit->normal.x, 1)) && hit->delta.length() > 1.5f)
-							{
-								//Stop movement in that direction.
-								transform_->velocity.x = 0;
-
-								//Translate out of the intersect.
-								//transform_->position.x -= (hit->delta.x + 1);
-							}
-							*/
-							
+							//Bug: We check the delta with horizontal checks for now (hit->delta.length() > 1.1f)
+							//	 This is a hack, I'm doing it for now as I'm having issues with left/right collision when walking over gaps in tiles.
+							//	 
 							// If we hit a wall on the left.
-							if(Equals(hit->normal.x, -1) && hit->delta.length() > 1.5f)
+							if(Equals(hit->normal.x, -1) && hit->delta.x < -1.1f)
 							{
-								std::cout << "LEFT  = " << hit->delta.x << std::endl;
+								//std::cout << "LEFT  = " << hit->delta.x << std::endl;
 								
 								//Stop movement in that direction.
 								transform_->velocity.x = 0;
@@ -224,9 +209,9 @@ namespace Game
 								transform_->position.x -= (hit->delta.x + 1);
 							}
 							// If we hit a wall on the right.
-							if(Equals(hit->normal.x, 1) && hit->delta.length() > 1.5f)
+							if(Equals(hit->normal.x, 1) && hit->delta.x > 1.1f)
 							{
-								std::cout << "RIGHT  = " << hit->delta.x << std::endl;
+								//std::cout << "RIGHT  = " << hit->delta.x << std::endl;
 
 								//Stop movement in that direction.
 								transform_->velocity.x = 0;
