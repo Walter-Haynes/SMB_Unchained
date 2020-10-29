@@ -49,10 +49,18 @@ namespace Game
 				TransformComponent* transform_;
 				RendererComponent*  renderer_;
 				ColliderComponent*  collider_;
-				
-				float gravity_ = -9.8f;
+
+				/*!
+				 * Override this if you want gravity other than the default.
+				 *      @return The gravity variable
+				 */
+				virtual float Gravity() const;
 
 				void ApplyGravity() const;
+
+			private:
+				const float DEFAULT_GRAVITY_ = 9.8f;
+				
 			};
 		}
 	}

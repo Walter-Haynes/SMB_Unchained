@@ -35,13 +35,20 @@ namespace Game
 				float ground_walk_acceleration_ = 60.0f, ground_run_acceleration_ = 150.0f,  air_acceleration_ = 30.0f;
 				float ground_deceleration_ = 50;
 
-				float jump_height_ = 40.0f;
+				float jump_height_ = 4.0f; //40
+				float gravity_ = 50.0f; //100
+
+				bool is_grounded_ = false;
 
 				//vec2 internal_velocity_;
 
 				ColliderComponent* ground_check_collider_;
 
-				bool IsGrounded() const;
+				
+				float Gravity() const override;
+				
+				bool CheckIsGrounded() const;
+				//TODO: Potentially remove.
 				Collisions* CheckCollision();
 
 				void Walk();

@@ -32,9 +32,14 @@ namespace Game
 				collider_->bounds = bounds;
 			}
 
+			float Actor::Gravity() const
+			{
+				return DEFAULT_GRAVITY_;
+			}
+
 			void Actor::ApplyGravity() const
 			{
-				transform_->velocity.y += gravity_ * DeltaTime();
+				transform_->velocity.y += (Gravity() * DeltaTime());
 			}
 		}
 	}

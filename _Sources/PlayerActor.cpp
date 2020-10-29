@@ -28,21 +28,30 @@ namespace Game
 				//Special
 
 				//Gravity
-				transform_->velocity.y += 100 * DeltaTime();
+				//transform_->velocity.y += Gravity() * DeltaTime();
+
+				ApplyGravity();
 				
 				Jump();
 				
 				Walk();
 
-				//ground_check_collider_->DebugBounds(IsGrounded() ? 0x00FFFF : 0xFF0000);
+				//ground_check_collider_->DebugBounds(CheckIsGrounded() ? 0x00FFFF : 0xFF0000);
 
 				//transform_->Translate(transform_->velocity * DeltaTime());
 				transform_->Update();
 
 				ResolveIntersects();
+
+				is_grounded_ = CheckIsGrounded();
 			}
 
-			bool PlayerActor::IsGrounded() const
+			float PlayerActor::Gravity() const
+			{
+				return gravity_;
+			}
+
+			bool PlayerActor::CheckIsGrounded() const
 			{
 				//Doesn't particularly scale well, but people keep telling me to KISS, so I WILL.
 				for (int i = 0; i < ColliderComponent::GetCount(); ++i)
@@ -73,7 +82,7 @@ namespace Game
 
 			PlayerActor::Collisions* PlayerActor::CheckCollision()
 			{
-				auto collisions = new Collisions();
+				const auto collisions = new Collisions();
 				
 				//Doesn't particularly scale well, but people keep telling me to KISS, so I WILL.
 				for (int i = 0; i < ColliderComponent::GetCount(); ++i)
@@ -104,7 +113,7 @@ namespace Game
 			{
 				//TODO: Player states, Ground_Walk, Ground_Idle, Jump etc (use for animation) bitflags for Left/Right also please thank you.
 				
-				const float acceleration = IsGrounded()
+				const float acceleration = is_grounded_
 									? Input()->GetKeyDown("Special") ? ground_run_acceleration_ : ground_walk_acceleration_ //Different speed based on whether we're sprinting or not.
 									: air_acceleration_; //Different speed if we're not grounded.
 
@@ -126,13 +135,13 @@ namespace Game
 
 			void PlayerActor::Jump()
 			{
-				if(!IsGrounded()) return;
+				if(!is_grounded_) return;
 				
 				transform_->velocity.y = 0;
 
 				if(Input()->GetKeyDown("Up"))
 				{
-					transform_->velocity.y = -sqrt(2 * jump_height_ * abs(gravity_));
+					transform_->velocity.y = -sqrt(2 * jump_height_ * abs(Gravity()));
 				}
 
 				/*
@@ -186,28 +195,41 @@ namespace Game
 								transform_->Translate(0, -hit->delta.y);
 							}
 
+							/*
 							//If we hit a wall on the left
-							if(hit->normal.x == -1 && hit->delta.length() > 1.5f)
+							if((Equals(hit->normal.x, -1) || Equals(hit->normal.x, 1)) && hit->delta.length() > 1.5f)
+							{
+								//Stop movement in that direction.
+								transform_->velocity.x = 0;
+
+								//Translate out of the intersect.
+								//transform_->position.x -= (hit->delta.x + 1);
+							}
+							*/
+							
+							// If we hit a wall on the left.
+							if(Equals(hit->normal.x, -1) && hit->delta.length() > 1.5f)
 							{
 								std::cout << "LEFT  = " << hit->delta.x << std::endl;
 								
 								//Stop movement in that direction.
 								transform_->velocity.x = 0;
 
-								//Translate out of that spot.
+								//Translate out of the intersect.
 								transform_->position.x -= (hit->delta.x + 1);
 							}
-							if(hit->normal.x == 1 && hit->delta.length() > 1.5f)
+							// If we hit a wall on the right.
+							if(Equals(hit->normal.x, 1) && hit->delta.length() > 1.5f)
 							{
 								std::cout << "RIGHT  = " << hit->delta.x << std::endl;
 
 								//Stop movement in that direction.
 								transform_->velocity.x = 0;
 								
-								//Translate out of that spot.
+								//Translate out of the intersect.
 								transform_->position.x -= (hit->delta.x - 1);
-								
 							}
+							
 
 							/*
 							if(!IsZero(hit->normal.x))
@@ -253,6 +275,7 @@ namespace Game
 					*/
 				//}
 			}
+
 		}
 	}
 }
