@@ -4,8 +4,6 @@
 
 
 #include <iostream>
-#include <MathUtilities.h>
-using namespace Engine::MathUtilities;
 
 namespace Game
 {
@@ -15,9 +13,10 @@ namespace Game
 		{
 			PlayerActor::PlayerActor() : Actor(new Sprite(new Surface("assets/Actors/PlayerActor.png"), 1))
 			{
-				AddComponent(ground_check_collider_ = new ColliderComponent());
-				ground_check_collider_->bounds = *new vec2(1.0f, 1.0f);
-				//ground_check_collider_->offset = *new vec2(0, 0.25f); //a way to check for ground even when Mario is a little bit above the ground.
+				//AddComponent(ground_check_collider_ = new ColliderComponent());
+				//ground_check_collider_->bounds = *new vec2(1.0f, 1.0f);
+				
+				////ground_check_collider_->offset = *new vec2(0, 0.25f); //a way to check for ground even when Mario is a little bit above the ground.
 			}
 
 			void PlayerActor::Update()
@@ -54,16 +53,16 @@ namespace Game
 					//TODO: Check based on tags / collision matrix.
 					
 					//Skip own colliders.
-					if (check_against == this->collider_) continue;
-					if (check_against == this->ground_check_collider_) continue;
+					if(check_against == this->collider_) continue;
+					//if (check_against == this->ground_check_collider_) continue;
 
 					//return true if the collider we're checking against collides with the player's "ground check collider".
-					if(ground_check_collider_->CollidesWith(check_against)) 
+					if(collider_->CollidesWith(check_against)) 
 					{
 						ColliderComponent::Hit2D* hit = collider_->Intersects(check_against);
 
 						//Only grounded if the normal points upwards.
-						if (Equals(hit->normal.y, 1))
+						if(Equals(hit->normal.y, 1))
 						{
 							return true;
 						}
@@ -73,6 +72,7 @@ namespace Game
 				return false;
 			}
 
+			/*
 			PlayerActor::Collisions* PlayerActor::CheckCollision()
 			{
 				const auto collisions = new Collisions();
@@ -101,6 +101,7 @@ namespace Game
 
 				return collisions;
 			}
+			*/
 
 			void PlayerActor::Walk()
 			{
@@ -126,7 +127,7 @@ namespace Game
 				}
 			}
 
-			void PlayerActor::Jump()
+			void PlayerActor::Jump() const
 			{
 				if(!is_grounded_) return;
 				
@@ -138,6 +139,7 @@ namespace Game
 				}
 			}
 
+			/*
 			void PlayerActor::ResolveIntersects()
 			{
 				for (int i = 0; i < ColliderComponent::GetCount(); ++i)
@@ -208,6 +210,7 @@ namespace Game
 					}
 				}
 			}
+			*/
 
 		}
 	}

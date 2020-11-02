@@ -35,29 +35,28 @@ namespace Game
 				float ground_walk_acceleration_ = 60.0f, ground_run_acceleration_ = 150.0f,  air_acceleration_ = 30.0f;
 				float ground_deceleration_ = 50;
 
-				float jump_height_ = 4.0f; //40
-				float gravity_ = 50.0f; //100
+				float jump_height_ = 4.0f;
+				float gravity_ = 50.0f;
 
 				bool is_grounded_ = false;
 
 				//vec2 internal_velocity_;
 
-				ColliderComponent* ground_check_collider_;
+				//ColliderComponent* ground_check_collider_;
 
 				
 				float Gravity() const override;
 				
 				bool CheckIsGrounded() const;
-				//TODO: Potentially remove.
-				Collisions* CheckCollision();
+				
+				////TODO: Potentially remove.
+				//Collisions* CheckCollision();
 
 				void Walk();
-				void Jump();
+				void Jump() const;
 
-				/*!
-				 *  Pushes the player's collider out of collider's it's intersecting with.
-				 */
-				void ResolveIntersects();
+			
+				//void ResolveIntersects();
 
 				/*!
 				 *  Shortcut to the Input Manager.

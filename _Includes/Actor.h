@@ -10,7 +10,9 @@ using Engine::Components::RendererComponent;
 #include "ColliderComponent.h"
 using Engine::Components::ColliderComponent;
 
-#include "MathUtilities.h"
+#include <MathUtilities.h>
+using namespace Engine::MathUtilities;
+
 using Engine::MathUtilities::PIXELS_TO_UNITS;
 
 namespace Game
@@ -25,6 +27,11 @@ namespace Game
 				Actor();
 				Actor(Sprite* sprite);
 				Actor(Sprite* sprite, const vec2 bounds);
+
+				/*!
+				 *  Kills the actor, override to add custom death behaviour.
+				 */
+				virtual void Kill();
 
 				#pragma region Default Components
 				
@@ -56,10 +63,15 @@ namespace Game
 				 */
 				virtual float Gravity() const;
 
-				void ApplyGravity() const;
+				virtual void ApplyGravity() const;
+
+				/*!
+				 *  Pushes the Actor's collider out of colliders it's intersecting with.
+				 */
+				virtual void ResolveIntersects();
 
 			private:
-				const float DEFAULT_GRAVITY_ = 9.8f;
+				const float DEFAULT_GRAVITY_ = 50.0f; //9.8f;
 				
 			};
 		}
