@@ -56,6 +56,9 @@ namespace Game
 					if(check_against == this->collider_) continue;
 					//if (check_against == this->ground_check_collider_) continue;
 
+					//Skip triggers.
+					if (check_against->is_trigger) continue;
+
 					//return true if the collider we're checking against collides with the player's "ground check collider".
 					if(collider_->CollidesWith(check_against)) 
 					{

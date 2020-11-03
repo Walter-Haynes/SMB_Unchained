@@ -225,6 +225,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CoinPickup.cpp" />
     <ClCompile Include="_Sources\GoombaActor.cpp" />
     <ClCompile Include="_Sources\Pickup.cpp" />
     <ClCompile Include="_Sources\BrickTile.cpp" />
@@ -252,6 +253,7 @@
     <ClCompile Include="_Sources\TransformComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CoinPickup.h" />
     <ClInclude Include="_Includes\GoombaActor.h" />
     <ClInclude Include="_Includes\Pickup.h" />
     <ClInclude Include="_Includes\BrickTile.h" />

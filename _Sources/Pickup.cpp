@@ -15,14 +15,14 @@ namespace Game
 				AddComponent(transform_ = new TransformComponent());
 				AddComponent(renderer_  = new RendererComponent(new Sprite(new Surface("assets/DefaultSprite.png"), 1)));
 				AddComponent(collider_  = new ColliderComponent());
-				collider_->bounds = *new vec2(1, 1);
+				collider_->is_trigger = true;
 			}
 			Pickup::Pickup(Sprite* sprite)
 			{
 				AddComponent(transform_ = new TransformComponent());
 				AddComponent(renderer_  = new RendererComponent(sprite));
 				AddComponent(collider_  = new ColliderComponent());
-				collider_->bounds = *new vec2(1, 1);
+				collider_->is_trigger = true;
 			}
 
 			void Pickup::SetPosition(const vec2 position)

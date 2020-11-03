@@ -49,27 +49,35 @@ namespace Game
 	
 	#pragma region Loop
 	
-	void SuperMarioBros::Start()
+	void SuperMarioBros::Start() const
 	{
 		SetupInputs();
 		SetupWorld();
 
 		power_tile_test_->GetTransform()->position = *new vec2(4, -3);
 
-		player_actor_->Start();
 		player_actor_->GetTransform()->position = *new vec2(1, -1);
+		//player_actor_->Start();
+
+
+		goomba_actor_->GetTransform()->position = *new vec2(7, -2);
 	}
 
-	void SuperMarioBros::Update()
+	void SuperMarioBros::Update() const
 	{
 		RenderManager()->ClearScreen();
 
 		player_actor_->Update();
+
+		if(goomba_actor_)
+		{
+			goomba_actor_->Update();
+		}
 		
 		RenderManager()->DrawAllRenderers();
 	}
 
-	void SuperMarioBros::Stop()
+	void SuperMarioBros::Stop() const
 	{
 		player_actor_->Stop();
 	}

@@ -15,15 +15,24 @@ namespace Game
 			{
 			public:
 				GoombaActor();
+				~GoombaActor();
 
 				//void Start() override;
 				void Update() override;
 				//void Stop() override;
 
+				void Kill() override;
+
 			private:
 				float max_speed_ = 15.0f; //TODO: Maybe move to base Actor?
 
 				int input_dir_ = -1;
+
+				ColliderComponent* player_check_trigger_;
+
+
+				bool CheckIsGrounded() const;
+				void KillIfStomped();
 				
 				//bool is_going_left_ = false;
 				

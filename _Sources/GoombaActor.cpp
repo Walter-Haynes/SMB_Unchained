@@ -91,7 +91,7 @@ namespace Game
 				//else if Collision on the right.
 					//input_dir_ = -1; //left
 
-				input_dir_ = 0;
+				//input_dir_ = 0;
 
 				for (int i = 0; i < ColliderComponent::GetCount(); ++i)
 				{
@@ -103,6 +103,7 @@ namespace Game
 					{
 						ColliderComponent::Hit2D* hit = collider_->Intersects(check_against);
 
+						//Only change direction if we've hit a wall, otherwise keep going.
 						if (hit)
 						{
 

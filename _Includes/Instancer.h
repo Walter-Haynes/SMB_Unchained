@@ -42,7 +42,7 @@ namespace Engine
 		template<typename T>
 		Instancer<T>::~Instancer()
 		{
-			this->Destroy();
+			//this->Destroy();
 		}
 
 

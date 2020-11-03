@@ -70,6 +70,7 @@
     <ClCompile Include="_Sources\GoombaActor.cpp">
       <Filter>Game Code\Prefabs\Actors</Filter>
     </ClCompile>
+    <ClCompile Include="CoinPickup.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_Includes\surface.h">
@@ -165,6 +166,7 @@
     <ClInclude Include="_Includes\PowerTile.h">
       <Filter>Game Code\Prefabs\Tiles</Filter>
     </ClInclude>
+    <ClInclude Include="CoinPickup.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Template Code">

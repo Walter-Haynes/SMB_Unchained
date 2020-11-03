@@ -11,13 +11,10 @@ namespace Engine
 	public:
 		Component() = default;
 
-		Component(Component* parent) : parent_(parent)
-		{ }
+		Component(Component* parent) : parent_(parent) { }
 
-		virtual ~Component()
-		{
-			//delete parent_;
-		}
+		virtual ~Component() = default;
+
 
 		Component* GetParent() const
 		{
@@ -37,6 +34,22 @@ namespace Engine
 
 			components_.Add(component);
 		}
+		void RemoveComponent(Component* comp)
+		{
+			if (comp != nullptr)
+			{
+
+				for (unsigned int i = 0; i < components_.Count(); i++)
+				{
+					if (components_[i] == comp)
+					{
+						components_.RemoveAt(i);
+						delete(comp);
+					}
+				}
+
+			}
+		}
 
 		template<class T>
 		T* GetComponent()
@@ -45,7 +58,7 @@ namespace Engine
 
 			for (unsigned int i = 0; i < components_.Count(); i++)
 			{
-				if ((component = dynamic_cast<T*>(components_[i])))
+				if ((component = dynamic_cast<T*>(components_[i])) != nullptr)
 				{
 					return component;
 				}

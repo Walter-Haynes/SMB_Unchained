@@ -35,8 +35,11 @@ namespace Game
 			Actor::~Actor()
 			{
 				RemoveComponent(transform_);
+				//delete(transform_);
 				RemoveComponent(renderer_);
+				//delete(renderer_);
 				RemoveComponent(collider_);
+				//delete(collider_);
 			}
 
 			void Actor::Kill()

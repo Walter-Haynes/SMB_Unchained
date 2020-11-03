@@ -28,6 +28,8 @@ namespace Game
 				Actor(Sprite* sprite);
 				Actor(Sprite* sprite, const vec2 bounds);
 
+				virtual ~Actor();
+
 				/*!
 				 *  Kills the actor, override to add custom death behaviour.
 				 */
