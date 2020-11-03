@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['c_15965',['c',['../struct_s_d_l_test___random_context.html#a17a6a7e7b68a33c67d9b74c8c7c33198',1,'SDLTest_RandomContext']]],
+  ['callback_15966',['callback',['../struct_s_d_l___audio_spec.html#a1f8d05139f1679dcf359f49251233eac',1,'SDL_AudioSpec']]],
+  ['caxis_15967',['caxis',['../union_s_d_l___event.html#aa8f6df0f2716fae56204b12ab4a4c289',1,'SDL_Event']]],
+  ['cb_15968',['cb',['../struct___g_p_u___d_e_v_i_c_e.html#afcb22f16ba9e526610489ff56ab78ddb',1,'_GPU_DEVICE']]],
+  ['cbutton_15969',['cbutton',['../union_s_d_l___event.html#aee2b5671c8dcdb447023715cc21593cb',1,'SDL_Event']]],
+  ['cdevice_15970',['cdevice',['../union_s_d_l___event.html#ad3beed01e690b885728e0b0e1d636378',1,'SDL_Event']]],
+  ['cell_15971',['cell',['../class_tmpl8_1_1vec2.html#ad46a1a3b7320390139fdb710b531541e',1,'Tmpl8::vec2::cell()'],['../class_tmpl8_1_1vec3.html#a78b0f38c0ee2075c6ae59894ed509f85',1,'Tmpl8::vec3::cell()'],['../class_tmpl8_1_1vec4.html#a3c36475bac8d65761402351b18ad923c',1,'Tmpl8::vec4::cell()'],['../class_tmpl8_1_1uint4.html#a10833b32e60c3a1efb43e91744e64393',1,'Tmpl8::uint4::cell()'],['../class_tmpl8_1_1int4.html#a47b9d150513a8dc34231f9f10b152cd0',1,'Tmpl8::int4::cell()'],['../class_tmpl8_1_1mat4.html#a2353f97e2059c99982da30ff8d3dac7f',1,'Tmpl8::mat4::cell()']]],
+  ['center_15972',['center',['../struct_s_d_l___haptic_condition.html#a8a71ec28ff5ab85246cbc59736aa2c53',1,'SDL_HapticCondition']]],
+  ['channels_15973',['channels',['../struct_s_d_l___audio_spec.html#a31fe8b3710cf23bbef24be8a1749fe46',1,'SDL_AudioSpec::channels()'],['../struct_s_d_l___haptic_custom.html#a560215762e9096d583d75867d9227cf5',1,'SDL_HapticCustom::channels()']]],
+  ['clicks_15974',['clicks',['../struct_s_d_l___mouse_button_event.html#aa606bebcbc3ffc7e932016039c2a36a1',1,'SDL_MouseButtonEvent']]],
+  ['clip_5frect_15975',['clip_rect',['../struct_s_d_l___surface.html#aa9a0da3b38261dad6cf0cc4e3bb5b0c3',1,'SDL_Surface']]],
+  ['code_15976',['code',['../struct_s_d_l___user_event.html#aef47976781ee82b527a353c5acfa0a34',1,'SDL_UserEvent']]],
+  ['collider_5f_15977',['collider_',['../class_game_1_1_prefabs_1_1_actors_1_1_actor.html#a327958087012ef24ddac525cea43c689',1,'Game::Prefabs::Actors::Actor::collider_()'],['../class_game_1_1_prefabs_1_1_pickups_1_1_pickup.html#a0b86d0a9b117dcc53e3f4847c6aa42ab',1,'Game::Prefabs::Pickups::Pickup::collider_()']]],
+  ['colliding_5fcolliders_15978',['colliding_colliders',['../struct_game_1_1_prefabs_1_1_actors_1_1_player_actor_1_1_collisions.html#afde0ce47fa2133254638ab31d57a0ba3',1,'Game::Prefabs::Actors::PlayerActor::Collisions']]],
+  ['colorkey_15979',['colorKey',['../union_s_d_l___window_shape_params.html#a8bf3e442a51a1bbf452cfec7c1ed5318',1,'SDL_WindowShapeParams']]],
+  ['colors_15980',['colors',['../struct_s_d_l___message_box_color_scheme.html#ae3712ec81e41b63b781b7d49d3b3b8f6',1,'SDL_MessageBoxColorScheme::colors()'],['../struct_s_d_l___palette.html#ad757a50037f43533196e94942440b241',1,'SDL_Palette::colors()']]],
+  ['colorscheme_15981',['colorScheme',['../struct_s_d_l___message_box_data.html#a18744865a3e89e260db5f01aee579e35',1,'SDL_MessageBoxData']]],
+  ['common_15982',['common',['../union_s_d_l___event.html#abe5cb8767f93de55163c8ddd4562a7f2',1,'SDL_Event']]],
+  ['condition_15983',['condition',['../struct_s_d_l__assert__data.html#aa2e21779fd9c5fd035c6deabe8aa4325',1,'SDL_assert_data::condition()'],['../union_s_d_l___haptic_effect.html#aa8fdd1ba202ccd7e61f48ef9977080d2',1,'SDL_HapticEffect::condition()']]],
+  ['constant_15984',['constant',['../union_s_d_l___haptic_effect.html#ac435275e9683d6cc5d65b9c7cc2ec659',1,'SDL_HapticEffect']]],
+  ['contact_15985',['contact',['../struct_engine_1_1_components_1_1_collider_component_1_1_hit2_d.html#a0b75ff42166100643b6d1d9854e0225e',1,'Engine::Components::ColliderComponent::Hit2D']]],
+  ['crc32_5ftable_15986',['crc32_table',['../struct_s_d_l_test___crc32_context.html#ae95d0d0b48bafc4e2f6f032f754ffa4c',1,'SDLTest_Crc32Context']]],
+  ['current_5fscene_15987',['current_scene',['../class_engine_1_1_managers_1_1_scene_manager.html#a92b447b0ddc092872fc3596eb6de0ab9',1,'Engine::Managers::SceneManager']]],
+  ['custom_15988',['custom',['../union_s_d_l___haptic_effect.html#a0b2d2af28c515cc39896b2b7c23019d2',1,'SDL_HapticEffect']]]
+];

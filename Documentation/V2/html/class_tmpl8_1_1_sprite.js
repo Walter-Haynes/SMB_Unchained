@@ -1,0 +1,25 @@
+var class_tmpl8_1_1_sprite =
+[
+    [ "FLARE", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450eba2e475a0225a655d568be2c552acce86d", null ],
+    [ "OPFLARE", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450ebadbc8a0b50eb120f879ef46c948852a77", null ],
+    [ "FLASH", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450eba4962a01ca76a298ee26de36d3941ca1a", null ],
+    [ "DISABLED", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450ebaa774c7c5b06e7a11bb73501541193fcd", null ],
+    [ "GMUL", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450eba5bde55a31784128bf5b940383b7e3f61", null ],
+    [ "BLACKFLARE", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450eba61817a28206bcefd18d8836a58d4e60b", null ],
+    [ "BRIGHTEST", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450ebaa6868fb1687746af8877b3654fd2d524", null ],
+    [ "RFLARE", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450ebaf581e991b8c80b2f5ca07785041f807b", null ],
+    [ "GFLARE", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450ebaa0280cd1297de6340e36dc27a86123c4", null ],
+    [ "NOCLIP", "class_tmpl8_1_1_sprite.html#ac62c50920cd914e9f29ec2012ed450ebac18c732e533e68568caf30c0045c0bfe", null ],
+    [ "Sprite", "class_tmpl8_1_1_sprite.html#a34a332a59aac199b1a9b1cc14b0ef3a8", null ],
+    [ "~Sprite", "class_tmpl8_1_1_sprite.html#a33c2f062bd1dac465096c1030586d43d", null ],
+    [ "Draw", "class_tmpl8_1_1_sprite.html#a307d8f5e9b04ce8ed148514fce0316dc", null ],
+    [ "DrawScaled", "class_tmpl8_1_1_sprite.html#aa716f13c469365d5845e0546d7b46b81", null ],
+    [ "Frames", "class_tmpl8_1_1_sprite.html#a758a4cc0c270190ba4e7b101e29d3b01", null ],
+    [ "GetBuffer", "class_tmpl8_1_1_sprite.html#a459682784820c68022dc7f3211114ee6", null ],
+    [ "GetFlags", "class_tmpl8_1_1_sprite.html#a30facedc331b0960774fc09080033303", null ],
+    [ "GetHeight", "class_tmpl8_1_1_sprite.html#ab33eaace9a5d180ae10433d7fb492104", null ],
+    [ "GetSurface", "class_tmpl8_1_1_sprite.html#a4b727c04f64f853a61480a028599dd1b", null ],
+    [ "GetWidth", "class_tmpl8_1_1_sprite.html#a8c8a39bb882b5388b1b5548a021bd94b", null ],
+    [ "SetFlags", "class_tmpl8_1_1_sprite.html#a245027e1f09756f120e95ad854980966", null ],
+    [ "SetFrame", "class_tmpl8_1_1_sprite.html#ad3f2af660c32bba02e8cdf18554eb7ba", null ]
+];

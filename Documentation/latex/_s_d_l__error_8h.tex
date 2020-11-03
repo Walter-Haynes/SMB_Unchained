@@ -1,0 +1,121 @@
+\hypertarget{_s_d_l__error_8h}{}\doxysection{C\+:/\+\_\+\+Projects/\+Jacco\+Template/lib/\+S\+D\+L2-\/2.0.3/include/\+S\+D\+L\+\_\+error.h File Reference}
+\label{_s_d_l__error_8h}\index{C:/\_Projects/JaccoTemplate/lib/SDL2-\/2.0.3/include/SDL\_error.h@{C:/\_Projects/JaccoTemplate/lib/SDL2-\/2.0.3/include/SDL\_error.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__error_8h_aca3d54a0ead3ce489dae449d652f6b30}{S\+D\+L\+\_\+\+Set\+Error}} (const char $\ast$fmt,...)
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__error_8h_ac88e1aa404a8f94aaee4ad6b94547647}{S\+D\+L\+\_\+\+Get\+Error}} (\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}})
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__error_8h_a007ed517953a99a46e46be567ef5609e}{S\+D\+L\+\_\+\+Clear\+Error}} (\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Internal error functions}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__error_8h_a440edcb93dba4e39c88ecf8dc676b6c1}{S\+D\+L\+\_\+\+Out\+Of\+Memory}}()~\mbox{\hyperlink{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}{S\+D\+L\+\_\+\+Error}}(\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1aeaf35f3f31922623b3f773c749c7ae4a}{S\+D\+L\+\_\+\+E\+N\+O\+M\+EM}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__error_8h_a45dc695e3a906dd40f00e204ace3bcf5}{S\+D\+L\+\_\+\+Unsupported}}()~\mbox{\hyperlink{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}{S\+D\+L\+\_\+\+Error}}(\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a8f8a44a4f0a0ec7f25ea8e3c88bcd54b}{S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__error_8h_a5875c9c083a88408e11abeaa8391dfa5}{S\+D\+L\+\_\+\+Invalid\+Param\+Error}}(\mbox{\hyperlink{_s_d_l__opengl_8h_ac4c6e469a2f8f41e4a19e8c112a453bd}{param}})~\mbox{\hyperlink{_s_d_l__error_8h_aca3d54a0ead3ce489dae449d652f6b30}{S\+D\+L\+\_\+\+Set\+Error}}(\char`\"{}Parameter \textquotesingle{}\%\mbox{\hyperlink{_s_d_l__opengl_8h_ad585a1393cfa368fa9dc3d8ebff640d5}{s}}\textquotesingle{} is invalid\char`\"{}, (param))
+\item 
+enum \mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}{S\+D\+L\+\_\+errorcode}} \{ \newline
+\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1aeaf35f3f31922623b3f773c749c7ae4a}{S\+D\+L\+\_\+\+E\+N\+O\+M\+EM}}, 
+\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1abf97ce3dad635bff2cd5a97d095b1421}{S\+D\+L\+\_\+\+E\+F\+R\+E\+AD}}, 
+\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a4ef09219815642370515451395f42683}{S\+D\+L\+\_\+\+E\+F\+W\+R\+I\+TE}}, 
+\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a3eda0d07dbe5bdcf0aeedf9e33866474}{S\+D\+L\+\_\+\+E\+F\+S\+E\+EK}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a8f8a44a4f0a0ec7f25ea8e3c88bcd54b}{S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED}}, 
+\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a41573dd5f912c3648ac06b9dbb89cfcd}{S\+D\+L\+\_\+\+L\+A\+S\+T\+E\+R\+R\+OR}}
+ \}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}{S\+D\+L\+\_\+\+Error}} (\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}{S\+D\+L\+\_\+errorcode}} code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple error message routines for S\+DL. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__error_8h_a5875c9c083a88408e11abeaa8391dfa5}\label{_s_d_l__error_8h_a5875c9c083a88408e11abeaa8391dfa5}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_InvalidParamError@{SDL\_InvalidParamError}}
+\index{SDL\_InvalidParamError@{SDL\_InvalidParamError}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_InvalidParamError}{SDL\_InvalidParamError}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Invalid\+Param\+Error(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{_s_d_l__opengl_8h_ac4c6e469a2f8f41e4a19e8c112a453bd}{param}} }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__error_8h_aca3d54a0ead3ce489dae449d652f6b30}{S\+D\+L\+\_\+\+Set\+Error}}(\char`\"{}Parameter \textquotesingle{}\%\mbox{\hyperlink{_s_d_l__opengl_8h_ad585a1393cfa368fa9dc3d8ebff640d5}{s}}\textquotesingle{} is invalid\char`\"{}, (param))}
+
+\mbox{\Hypertarget{_s_d_l__error_8h_a440edcb93dba4e39c88ecf8dc676b6c1}\label{_s_d_l__error_8h_a440edcb93dba4e39c88ecf8dc676b6c1}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_OutOfMemory@{SDL\_OutOfMemory}}
+\index{SDL\_OutOfMemory@{SDL\_OutOfMemory}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_OutOfMemory}{SDL\_OutOfMemory}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Out\+Of\+Memory(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}{S\+D\+L\+\_\+\+Error}}(\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1aeaf35f3f31922623b3f773c749c7ae4a}{S\+D\+L\+\_\+\+E\+N\+O\+M\+EM}})}
+
+\mbox{\Hypertarget{_s_d_l__error_8h_a45dc695e3a906dd40f00e204ace3bcf5}\label{_s_d_l__error_8h_a45dc695e3a906dd40f00e204ace3bcf5}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_Unsupported@{SDL\_Unsupported}}
+\index{SDL\_Unsupported@{SDL\_Unsupported}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Unsupported}{SDL\_Unsupported}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Unsupported(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}{S\+D\+L\+\_\+\+Error}}(\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a8f8a44a4f0a0ec7f25ea8e3c88bcd54b}{S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED}})}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_errorcode@{SDL\_errorcode}}
+\index{SDL\_errorcode@{SDL\_errorcode}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_errorcode}{SDL\_errorcode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}{S\+D\+L\+\_\+errorcode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_ENOMEM@{SDL\_ENOMEM}!SDL\_error.h@{SDL\_error.h}}\index{SDL\_error.h@{SDL\_error.h}!SDL\_ENOMEM@{SDL\_ENOMEM}}}\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1aeaf35f3f31922623b3f773c749c7ae4a}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1aeaf35f3f31922623b3f773c749c7ae4a}} 
+S\+D\+L\+\_\+\+E\+N\+O\+M\+EM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_EFREAD@{SDL\_EFREAD}!SDL\_error.h@{SDL\_error.h}}\index{SDL\_error.h@{SDL\_error.h}!SDL\_EFREAD@{SDL\_EFREAD}}}\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1abf97ce3dad635bff2cd5a97d095b1421}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1abf97ce3dad635bff2cd5a97d095b1421}} 
+S\+D\+L\+\_\+\+E\+F\+R\+E\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_EFWRITE@{SDL\_EFWRITE}!SDL\_error.h@{SDL\_error.h}}\index{SDL\_error.h@{SDL\_error.h}!SDL\_EFWRITE@{SDL\_EFWRITE}}}\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a4ef09219815642370515451395f42683}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a4ef09219815642370515451395f42683}} 
+S\+D\+L\+\_\+\+E\+F\+W\+R\+I\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_EFSEEK@{SDL\_EFSEEK}!SDL\_error.h@{SDL\_error.h}}\index{SDL\_error.h@{SDL\_error.h}!SDL\_EFSEEK@{SDL\_EFSEEK}}}\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a3eda0d07dbe5bdcf0aeedf9e33866474}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a3eda0d07dbe5bdcf0aeedf9e33866474}} 
+S\+D\+L\+\_\+\+E\+F\+S\+E\+EK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_UNSUPPORTED@{SDL\_UNSUPPORTED}!SDL\_error.h@{SDL\_error.h}}\index{SDL\_error.h@{SDL\_error.h}!SDL\_UNSUPPORTED@{SDL\_UNSUPPORTED}}}\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a8f8a44a4f0a0ec7f25ea8e3c88bcd54b}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a8f8a44a4f0a0ec7f25ea8e3c88bcd54b}} 
+S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_LASTERROR@{SDL\_LASTERROR}!SDL\_error.h@{SDL\_error.h}}\index{SDL\_error.h@{SDL\_error.h}!SDL\_LASTERROR@{SDL\_LASTERROR}}}\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a41573dd5f912c3648ac06b9dbb89cfcd}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1a41573dd5f912c3648ac06b9dbb89cfcd}} 
+S\+D\+L\+\_\+\+L\+A\+S\+T\+E\+R\+R\+OR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__error_8h_a007ed517953a99a46e46be567ef5609e}\label{_s_d_l__error_8h_a007ed517953a99a46e46be567ef5609e}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_ClearError@{SDL\_ClearError}}
+\index{SDL\_ClearError@{SDL\_ClearError}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_ClearError()}{SDL\_ClearError()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Clear\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}\label{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_Error@{SDL\_Error}}
+\index{SDL\_Error@{SDL\_Error}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Error()}{SDL\_Error()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}{S\+D\+L\+\_\+errorcode}}}]{code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_d_l__error_8h_ac88e1aa404a8f94aaee4ad6b94547647}\label{_s_d_l__error_8h_ac88e1aa404a8f94aaee4ad6b94547647}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_GetError@{SDL\_GetError}}
+\index{SDL\_GetError@{SDL\_GetError}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetError()}{SDL\_GetError()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} const char$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_d_l__error_8h_aca3d54a0ead3ce489dae449d652f6b30}\label{_s_d_l__error_8h_aca3d54a0ead3ce489dae449d652f6b30}} 
+\index{SDL\_error.h@{SDL\_error.h}!SDL\_SetError@{SDL\_SetError}}
+\index{SDL\_SetError@{SDL\_SetError}!SDL\_error.h@{SDL\_error.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetError()}{SDL\_SetError()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+

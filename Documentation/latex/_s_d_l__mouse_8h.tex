@@ -1,0 +1,450 @@
+\hypertarget{_s_d_l__mouse_8h}{}\doxysection{C\+:/\+\_\+\+Projects/\+Jacco\+Template/lib/\+S\+D\+L2-\/2.0.3/include/\+S\+D\+L\+\_\+mouse.h File Reference}
+\label{_s_d_l__mouse_8h}\index{C:/\_Projects/JaccoTemplate/lib/SDL2-\/2.0.3/include/SDL\_mouse.h@{C:/\_Projects/JaccoTemplate/lib/SDL2-\/2.0.3/include/SDL\_mouse.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(X)~(1 $<$$<$ ((X)-\/1))
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_a9500bda83bcc0e9afee1438a79019c5f}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}}~1
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_a4d7543e668502bbb75d045d8097fb8f3}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+D\+D\+LE}}~2
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_a63fcfb473ee5e5da3752e1cf75f12286}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}}~3
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_a1422ab75c7388bb5047028103a6df550}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X1}}~4
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_a2ae4ae2fe944879dc9ef6b16155d52e2}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X2}}~5
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_ad9ccef8108b6a1704a49ab93a91d2c47}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+M\+A\+SK}}~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a9500bda83bcc0e9afee1438a79019c5f}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_ad90dffab11146e0eb9f2e28267e6fbbd}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+M\+A\+SK}}~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a4d7543e668502bbb75d045d8097fb8f3}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+D\+D\+LE}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_aefa6805c2113f16e659edcde5172b5df}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+M\+A\+SK}}~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a63fcfb473ee5e5da3752e1cf75f12286}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_aee13129df2cc50d4a16c4fe7652737a0}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X1\+M\+A\+SK}}~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a1422ab75c7388bb5047028103a6df550}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X1}})
+\item 
+\#define \mbox{\hyperlink{_s_d_l__mouse_8h_afb0dfebdfec877410feb8800cfd7e443}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X2\+M\+A\+SK}}~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a2ae4ae2fe944879dc9ef6b16155d52e2}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X2}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732}{S\+D\+L\+\_\+\+System\+Cursor}} \{ \newline
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a0ea5055b7ef96598a39570abf365b9f9}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+A\+R\+R\+OW}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a5f3b85170a85ffb62aa477f9c31987fb}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+I\+B\+E\+AM}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a8ce5ae38a754042575234c8da72417e6}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+W\+A\+IT}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732ae18ee52eb9724301950db552c953e48e}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+C\+R\+O\+S\+S\+H\+A\+IR}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a71fe25cd68c411ca52370bacc40b2764}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+W\+A\+I\+T\+A\+R\+R\+OW}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a0eb8a498162417265c0ec79c1eacb30e}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+N\+W\+SE}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a5b70e5fee565ccf9a6a99f92c571b4ed}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+N\+E\+SW}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732aa2f663333ca851ce0f40f8f8d2c2a731}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+WE}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a04d6abe3f01b1c4b8d77af1b2ef5e4e9}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+NS}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a88849f7320ea2bf629e05a06c6ff8e20}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+A\+LL}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a70a8b0dec44a0f63d7af72e649de3b62}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+NO}}, 
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a09cd11742bffaafbd1073afeea03f7bc}{S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+A\+ND}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732aa19cf5bcb79a35e1c34beb243f9a7a7b}{S\+D\+L\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+RS}}
+ \}
+\begin{DoxyCompactList}\small\item\em Cursor types for S\+D\+L\+\_\+\+Create\+System\+Cursor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_af30def76b002152366831b21e3d95066}{S\+D\+L\+\_\+\+Get\+Mouse\+Focus}} (\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}})
+\begin{DoxyCompactList}\small\item\em Get the window which currently has mouse focus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a1561f413546c0e4f5f44a8f094926575}{S\+D\+L\+\_\+\+Get\+Mouse\+State}} (int $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a0cdec8e97a75ee9458b23d152bf962d4}{x}}, int $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a74d80fd479c0f6d0153c709949a089ef}{y}})
+\begin{DoxyCompactList}\small\item\em Retrieve the current state of the mouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a8cf9b519050e3e871f5e59f03b38b6e1}{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State}} (int $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a0cdec8e97a75ee9458b23d152bf962d4}{x}}, int $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a74d80fd479c0f6d0153c709949a089ef}{y}})
+\begin{DoxyCompactList}\small\item\em Retrieve the relative state of the mouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a2f2259cdf30272b3c4cc1e3236cb8071}{S\+D\+L\+\_\+\+Warp\+Mouse\+In\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$\mbox{\hyperlink{template_8cpp_aaa8e409e04dcf575ef63fd5fb3db06f9}{window}}, int \mbox{\hyperlink{_s_d_l__opengl_8h_a0cdec8e97a75ee9458b23d152bf962d4}{x}}, int \mbox{\hyperlink{_s_d_l__opengl_8h_a74d80fd479c0f6d0153c709949a089ef}{y}})
+\begin{DoxyCompactList}\small\item\em Moves the mouse to the given position within the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_ad7b3533784e0aa34cdf1c5f232817206}{S\+D\+L\+\_\+\+Set\+Relative\+Mouse\+Mode}} (\mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{_s_d_l__opengl_8h_a0455a397ab5468d21c3021f2efa6dd3c}{enabled}})
+\begin{DoxyCompactList}\small\item\em Set relative mouse mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_ae97aaf1682b3a6b62214dda1dda9b212}{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+Mode}} (\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}})
+\begin{DoxyCompactList}\small\item\em Query whether relative mouse mode is enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a4331ebf38e2f75f6cde88ce668e5650f}{S\+D\+L\+\_\+\+Create\+Cursor}} (const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_ae71d2e007af6a1d1ed622d3e8be266e2}{data}}, const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_abb269dedb7ad104274cc9f5c0c7285bc}{mask}}, int \mbox{\hyperlink{_s_d_l__opengl_8h_adb12a0d439f32ca388b2c806150cc54d}{w}}, int \mbox{\hyperlink{_s_d_l__opengl_8h_afa0fb1b5e976920c0abeff2dca3ed774}{h}}, int hot\+\_\+x, int hot\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Create a cursor, using the specified bitmap data and mask (in M\+SB format). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a964bab3503f74f92a5504b4cd166b400}{S\+D\+L\+\_\+\+Create\+Color\+Cursor}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$\mbox{\hyperlink{template_8cpp_ab6f320b1c0893e29314a5b07e395f4a3}{surface}}, int hot\+\_\+x, int hot\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Create a color cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a217c89743b3da84b9656304f8e4ca51e}{S\+D\+L\+\_\+\+Create\+System\+Cursor}} (\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732}{S\+D\+L\+\_\+\+System\+Cursor}} \mbox{\hyperlink{_s_d_l__opengl_8h_ae52362b10d585638f5b96140e90f1b7a}{id}})
+\begin{DoxyCompactList}\small\item\em Create a system cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a7c2971901f9a772be22152420aee275c}{S\+D\+L\+\_\+\+Set\+Cursor}} (\mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Set the active cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a427ee5473e9ce3f4ad7a58035d7a6ffd}{S\+D\+L\+\_\+\+Get\+Cursor}} (\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}})
+\begin{DoxyCompactList}\small\item\em Return the active cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a9b4d0726a2fa9aba7cf4f4286cf61257}{S\+D\+L\+\_\+\+Get\+Default\+Cursor}} (\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}})
+\begin{DoxyCompactList}\small\item\em Return the default cursor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}{S\+D\+L\+\_\+\+Free\+Cursor}} (\mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$cursor)
+\begin{DoxyCompactList}\small\item\em Frees a cursor created with \mbox{\hyperlink{_s_d_l__mouse_8h_a4331ebf38e2f75f6cde88ce668e5650f}{S\+D\+L\+\_\+\+Create\+Cursor()}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} \mbox{\hyperlink{_s_d_l__mouse_8h_a00286ec15cd56dee1fd71ed4e6e7a585}{S\+D\+L\+\_\+\+Show\+Cursor}} (int toggle)
+\begin{DoxyCompactList}\small\item\em Toggle whether or not the cursor is shown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Include file for S\+DL mouse event handling. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}\label{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON@{SDL\_BUTTON}}
+\index{SDL\_BUTTON@{SDL\_BUTTON}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON}{SDL\_BUTTON}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+ON(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~(1 $<$$<$ ((X)-\/1))}
+
+Used as a mask when testing buttons in buttonstate.
+\begin{DoxyItemize}
+\item Button 1\+: Left mouse button
+\item Button 2\+: Middle mouse button
+\item Button 3\+: Right mouse button 
+\end{DoxyItemize}\mbox{\Hypertarget{_s_d_l__mouse_8h_a9500bda83bcc0e9afee1438a79019c5f}\label{_s_d_l__mouse_8h_a9500bda83bcc0e9afee1438a79019c5f}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_LEFT@{SDL\_BUTTON\_LEFT}}
+\index{SDL\_BUTTON\_LEFT@{SDL\_BUTTON\_LEFT}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_LEFT}{SDL\_BUTTON\_LEFT}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT~1}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_ad9ccef8108b6a1704a49ab93a91d2c47}\label{_s_d_l__mouse_8h_ad9ccef8108b6a1704a49ab93a91d2c47}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_LMASK@{SDL\_BUTTON\_LMASK}}
+\index{SDL\_BUTTON\_LMASK@{SDL\_BUTTON\_LMASK}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_LMASK}{SDL\_BUTTON\_LMASK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+M\+A\+SK~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a9500bda83bcc0e9afee1438a79019c5f}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+L\+E\+FT}})}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a4d7543e668502bbb75d045d8097fb8f3}\label{_s_d_l__mouse_8h_a4d7543e668502bbb75d045d8097fb8f3}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_MIDDLE@{SDL\_BUTTON\_MIDDLE}}
+\index{SDL\_BUTTON\_MIDDLE@{SDL\_BUTTON\_MIDDLE}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_MIDDLE}{SDL\_BUTTON\_MIDDLE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+D\+D\+LE~2}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_ad90dffab11146e0eb9f2e28267e6fbbd}\label{_s_d_l__mouse_8h_ad90dffab11146e0eb9f2e28267e6fbbd}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_MMASK@{SDL\_BUTTON\_MMASK}}
+\index{SDL\_BUTTON\_MMASK@{SDL\_BUTTON\_MMASK}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_MMASK}{SDL\_BUTTON\_MMASK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+M\+A\+SK~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a4d7543e668502bbb75d045d8097fb8f3}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+I\+D\+D\+LE}})}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a63fcfb473ee5e5da3752e1cf75f12286}\label{_s_d_l__mouse_8h_a63fcfb473ee5e5da3752e1cf75f12286}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_RIGHT@{SDL\_BUTTON\_RIGHT}}
+\index{SDL\_BUTTON\_RIGHT@{SDL\_BUTTON\_RIGHT}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_RIGHT}{SDL\_BUTTON\_RIGHT}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT~3}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_aefa6805c2113f16e659edcde5172b5df}\label{_s_d_l__mouse_8h_aefa6805c2113f16e659edcde5172b5df}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_RMASK@{SDL\_BUTTON\_RMASK}}
+\index{SDL\_BUTTON\_RMASK@{SDL\_BUTTON\_RMASK}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_RMASK}{SDL\_BUTTON\_RMASK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+M\+A\+SK~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a63fcfb473ee5e5da3752e1cf75f12286}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+R\+I\+G\+HT}})}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a1422ab75c7388bb5047028103a6df550}\label{_s_d_l__mouse_8h_a1422ab75c7388bb5047028103a6df550}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_X1@{SDL\_BUTTON\_X1}}
+\index{SDL\_BUTTON\_X1@{SDL\_BUTTON\_X1}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_X1}{SDL\_BUTTON\_X1}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X1~4}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_aee13129df2cc50d4a16c4fe7652737a0}\label{_s_d_l__mouse_8h_aee13129df2cc50d4a16c4fe7652737a0}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_X1MASK@{SDL\_BUTTON\_X1MASK}}
+\index{SDL\_BUTTON\_X1MASK@{SDL\_BUTTON\_X1MASK}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_X1MASK}{SDL\_BUTTON\_X1MASK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X1\+M\+A\+SK~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a1422ab75c7388bb5047028103a6df550}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X1}})}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a2ae4ae2fe944879dc9ef6b16155d52e2}\label{_s_d_l__mouse_8h_a2ae4ae2fe944879dc9ef6b16155d52e2}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_X2@{SDL\_BUTTON\_X2}}
+\index{SDL\_BUTTON\_X2@{SDL\_BUTTON\_X2}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_X2}{SDL\_BUTTON\_X2}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X2~5}
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_afb0dfebdfec877410feb8800cfd7e443}\label{_s_d_l__mouse_8h_afb0dfebdfec877410feb8800cfd7e443}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_BUTTON\_X2MASK@{SDL\_BUTTON\_X2MASK}}
+\index{SDL\_BUTTON\_X2MASK@{SDL\_BUTTON\_X2MASK}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BUTTON\_X2MASK}{SDL\_BUTTON\_X2MASK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X2\+M\+A\+SK~\mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+ON}}(\mbox{\hyperlink{_s_d_l__mouse_8h_a2ae4ae2fe944879dc9ef6b16155d52e2}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+X2}})}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}\label{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_Cursor@{SDL\_Cursor}}
+\index{SDL\_Cursor@{SDL\_Cursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Cursor}{SDL\_Cursor}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SystemCursor@{SDL\_SystemCursor}}
+\index{SDL\_SystemCursor@{SDL\_SystemCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SystemCursor}{SDL\_SystemCursor}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732}{S\+D\+L\+\_\+\+System\+Cursor}}}
+
+
+
+Cursor types for S\+D\+L\+\_\+\+Create\+System\+Cursor. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_ARROW@{SDL\_SYSTEM\_CURSOR\_ARROW}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_ARROW@{SDL\_SYSTEM\_CURSOR\_ARROW}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a0ea5055b7ef96598a39570abf365b9f9}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a0ea5055b7ef96598a39570abf365b9f9}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+A\+R\+R\+OW&Arrow \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_IBEAM@{SDL\_SYSTEM\_CURSOR\_IBEAM}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_IBEAM@{SDL\_SYSTEM\_CURSOR\_IBEAM}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a5f3b85170a85ffb62aa477f9c31987fb}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a5f3b85170a85ffb62aa477f9c31987fb}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+I\+B\+E\+AM&I-\/beam \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_WAIT@{SDL\_SYSTEM\_CURSOR\_WAIT}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_WAIT@{SDL\_SYSTEM\_CURSOR\_WAIT}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a8ce5ae38a754042575234c8da72417e6}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a8ce5ae38a754042575234c8da72417e6}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+W\+A\+IT&Wait \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_CROSSHAIR@{SDL\_SYSTEM\_CURSOR\_CROSSHAIR}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_CROSSHAIR@{SDL\_SYSTEM\_CURSOR\_CROSSHAIR}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732ae18ee52eb9724301950db552c953e48e}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732ae18ee52eb9724301950db552c953e48e}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+C\+R\+O\+S\+S\+H\+A\+IR&Crosshair \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_WAITARROW@{SDL\_SYSTEM\_CURSOR\_WAITARROW}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_WAITARROW@{SDL\_SYSTEM\_CURSOR\_WAITARROW}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a71fe25cd68c411ca52370bacc40b2764}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a71fe25cd68c411ca52370bacc40b2764}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+W\+A\+I\+T\+A\+R\+R\+OW&Small wait cursor (or Wait if not available) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_SIZENWSE@{SDL\_SYSTEM\_CURSOR\_SIZENWSE}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_SIZENWSE@{SDL\_SYSTEM\_CURSOR\_SIZENWSE}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a0eb8a498162417265c0ec79c1eacb30e}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a0eb8a498162417265c0ec79c1eacb30e}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+N\+W\+SE&Double arrow pointing northwest and southeast \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_SIZENESW@{SDL\_SYSTEM\_CURSOR\_SIZENESW}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_SIZENESW@{SDL\_SYSTEM\_CURSOR\_SIZENESW}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a5b70e5fee565ccf9a6a99f92c571b4ed}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a5b70e5fee565ccf9a6a99f92c571b4ed}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+N\+E\+SW&Double arrow pointing northeast and southwest \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_SIZEWE@{SDL\_SYSTEM\_CURSOR\_SIZEWE}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_SIZEWE@{SDL\_SYSTEM\_CURSOR\_SIZEWE}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732aa2f663333ca851ce0f40f8f8d2c2a731}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732aa2f663333ca851ce0f40f8f8d2c2a731}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+WE&Double arrow pointing west and east \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_SIZENS@{SDL\_SYSTEM\_CURSOR\_SIZENS}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_SIZENS@{SDL\_SYSTEM\_CURSOR\_SIZENS}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a04d6abe3f01b1c4b8d77af1b2ef5e4e9}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a04d6abe3f01b1c4b8d77af1b2ef5e4e9}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+NS&Double arrow pointing north and south \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_SIZEALL@{SDL\_SYSTEM\_CURSOR\_SIZEALL}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_SIZEALL@{SDL\_SYSTEM\_CURSOR\_SIZEALL}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a88849f7320ea2bf629e05a06c6ff8e20}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a88849f7320ea2bf629e05a06c6ff8e20}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+S\+I\+Z\+E\+A\+LL&Four pointed arrow pointing north, south, east, and west \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_NO@{SDL\_SYSTEM\_CURSOR\_NO}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_NO@{SDL\_SYSTEM\_CURSOR\_NO}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a70a8b0dec44a0f63d7af72e649de3b62}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a70a8b0dec44a0f63d7af72e649de3b62}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+NO&Slashed circle or crossbones \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_SYSTEM\_CURSOR\_HAND@{SDL\_SYSTEM\_CURSOR\_HAND}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SYSTEM\_CURSOR\_HAND@{SDL\_SYSTEM\_CURSOR\_HAND}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a09cd11742bffaafbd1073afeea03f7bc}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732a09cd11742bffaafbd1073afeea03f7bc}} 
+S\+D\+L\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+R\+\_\+\+H\+A\+ND&Hand \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_NUM\_SYSTEM\_CURSORS@{SDL\_NUM\_SYSTEM\_CURSORS}!SDL\_mouse.h@{SDL\_mouse.h}}\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_NUM\_SYSTEM\_CURSORS@{SDL\_NUM\_SYSTEM\_CURSORS}}}\mbox{\Hypertarget{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732aa19cf5bcb79a35e1c34beb243f9a7a7b}\label{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732aa19cf5bcb79a35e1c34beb243f9a7a7b}} 
+S\+D\+L\+\_\+\+N\+U\+M\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+U\+R\+S\+O\+RS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a964bab3503f74f92a5504b4cd166b400}\label{_s_d_l__mouse_8h_a964bab3503f74f92a5504b4cd166b400}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_CreateColorCursor@{SDL\_CreateColorCursor}}
+\index{SDL\_CreateColorCursor@{SDL\_CreateColorCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_CreateColorCursor()}{SDL\_CreateColorCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Create\+Color\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{int}]{hot\+\_\+x,  }\item[{int}]{hot\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Create a color cursor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}{S\+D\+L\+\_\+\+Free\+Cursor()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a4331ebf38e2f75f6cde88ce668e5650f}\label{_s_d_l__mouse_8h_a4331ebf38e2f75f6cde88ce668e5650f}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_CreateCursor@{SDL\_CreateCursor}}
+\index{SDL\_CreateCursor@{SDL\_CreateCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_CreateCursor()}{SDL\_CreateCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Create\+Cursor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} $\ast$}]{data,  }\item[{const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} $\ast$}]{mask,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{hot\+\_\+x,  }\item[{int}]{hot\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Create a cursor, using the specified bitmap data and mask (in M\+SB format). 
+
+The cursor width must be a multiple of 8 bits.
+
+The cursor is created in black and white according to the following\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+data &mask &resulting pixel on screen  \\\cline{1-3}
+0 &1 &White  \\\cline{1-3}
+1 &1 &Black  \\\cline{1-3}
+0 &0 &Transparent  \\\cline{1-3}
+1 &0 &Inverted color if possible, black if not.  \\\cline{1-3}
+\end{longtabu}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}{S\+D\+L\+\_\+\+Free\+Cursor()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a217c89743b3da84b9656304f8e4ca51e}\label{_s_d_l__mouse_8h_a217c89743b3da84b9656304f8e4ca51e}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_CreateSystemCursor@{SDL\_CreateSystemCursor}}
+\index{SDL\_CreateSystemCursor@{SDL\_CreateSystemCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_CreateSystemCursor()}{SDL\_CreateSystemCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Create\+System\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__mouse_8h_a3e8083d1d8ce4c5a1ba76bfc2be8e732}{S\+D\+L\+\_\+\+System\+Cursor}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Create a system cursor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}{S\+D\+L\+\_\+\+Free\+Cursor()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}\label{_s_d_l__mouse_8h_ac17a8282f93d9d31e8e087236f0ecdd8}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_FreeCursor@{SDL\_FreeCursor}}
+\index{SDL\_FreeCursor@{SDL\_FreeCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_FreeCursor()}{SDL\_FreeCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Free\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$}]{cursor }\end{DoxyParamCaption})}
+
+
+
+Frees a cursor created with \mbox{\hyperlink{_s_d_l__mouse_8h_a4331ebf38e2f75f6cde88ce668e5650f}{S\+D\+L\+\_\+\+Create\+Cursor()}}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__mouse_8h_a4331ebf38e2f75f6cde88ce668e5650f}{S\+D\+L\+\_\+\+Create\+Cursor()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a427ee5473e9ce3f4ad7a58035d7a6ffd}\label{_s_d_l__mouse_8h_a427ee5473e9ce3f4ad7a58035d7a6ffd}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_GetCursor@{SDL\_GetCursor}}
+\index{SDL\_GetCursor@{SDL\_GetCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetCursor()}{SDL\_GetCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Return the active cursor. 
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a9b4d0726a2fa9aba7cf4f4286cf61257}\label{_s_d_l__mouse_8h_a9b4d0726a2fa9aba7cf4f4286cf61257}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_GetDefaultCursor@{SDL\_GetDefaultCursor}}
+\index{SDL\_GetDefaultCursor@{SDL\_GetDefaultCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetDefaultCursor()}{SDL\_GetDefaultCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Default\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Return the default cursor. 
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_af30def76b002152366831b21e3d95066}\label{_s_d_l__mouse_8h_af30def76b002152366831b21e3d95066}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_GetMouseFocus@{SDL\_GetMouseFocus}}
+\index{SDL\_GetMouseFocus@{SDL\_GetMouseFocus}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetMouseFocus()}{SDL\_GetMouseFocus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}$\ast$ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Mouse\+Focus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the window which currently has mouse focus. 
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a1561f413546c0e4f5f44a8f094926575}\label{_s_d_l__mouse_8h_a1561f413546c0e4f5f44a8f094926575}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_GetMouseState@{SDL\_GetMouseState}}
+\index{SDL\_GetMouseState@{SDL\_GetMouseState}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetMouseState()}{SDL\_GetMouseState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Mouse\+State (\begin{DoxyParamCaption}\item[{int $\ast$}]{x,  }\item[{int $\ast$}]{y }\end{DoxyParamCaption})}
+
+
+
+Retrieve the current state of the mouse. 
+
+The current button state is returned as a button bitmask, which can be tested using the \mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N(\+X)}} macros, and x and y are set to the mouse cursor position relative to the focus window for the currently selected mouse. You can pass N\+U\+LL for either x or y. \mbox{\Hypertarget{_s_d_l__mouse_8h_ae97aaf1682b3a6b62214dda1dda9b212}\label{_s_d_l__mouse_8h_ae97aaf1682b3a6b62214dda1dda9b212}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_GetRelativeMouseMode@{SDL\_GetRelativeMouseMode}}
+\index{SDL\_GetRelativeMouseMode@{SDL\_GetRelativeMouseMode}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetRelativeMouseMode()}{SDL\_GetRelativeMouseMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Query whether relative mouse mode is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__mouse_8h_ad7b3533784e0aa34cdf1c5f232817206}{S\+D\+L\+\_\+\+Set\+Relative\+Mouse\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a8cf9b519050e3e871f5e59f03b38b6e1}\label{_s_d_l__mouse_8h_a8cf9b519050e3e871f5e59f03b38b6e1}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_GetRelativeMouseState@{SDL\_GetRelativeMouseState}}
+\index{SDL\_GetRelativeMouseState@{SDL\_GetRelativeMouseState}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetRelativeMouseState()}{SDL\_GetRelativeMouseState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State (\begin{DoxyParamCaption}\item[{int $\ast$}]{x,  }\item[{int $\ast$}]{y }\end{DoxyParamCaption})}
+
+
+
+Retrieve the relative state of the mouse. 
+
+The current button state is returned as a button bitmask, which can be tested using the \mbox{\hyperlink{_s_d_l__mouse_8h_af1bb0dead027146b766e4e319e22ea7b}{S\+D\+L\+\_\+\+B\+U\+T\+T\+O\+N(\+X)}} macros, and x and y are set to the mouse deltas since the last call to \mbox{\hyperlink{_s_d_l__mouse_8h_a8cf9b519050e3e871f5e59f03b38b6e1}{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+State()}}. \mbox{\Hypertarget{_s_d_l__mouse_8h_a7c2971901f9a772be22152420aee275c}\label{_s_d_l__mouse_8h_a7c2971901f9a772be22152420aee275c}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SetCursor@{SDL\_SetCursor}}
+\index{SDL\_SetCursor@{SDL\_SetCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetCursor()}{SDL\_SetCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Cursor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__mouse_8h_a63b6e9cd23bbe26b8fa00dc8fba7623d}{S\+D\+L\+\_\+\+Cursor}} $\ast$}]{cursor }\end{DoxyParamCaption})}
+
+
+
+Set the active cursor. 
+
+\mbox{\Hypertarget{_s_d_l__mouse_8h_ad7b3533784e0aa34cdf1c5f232817206}\label{_s_d_l__mouse_8h_ad7b3533784e0aa34cdf1c5f232817206}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_SetRelativeMouseMode@{SDL\_SetRelativeMouseMode}}
+\index{SDL\_SetRelativeMouseMode@{SDL\_SetRelativeMouseMode}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetRelativeMouseMode()}{SDL\_SetRelativeMouseMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Set\+Relative\+Mouse\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{S\+D\+L\+\_\+bool}}}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Set relative mouse mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & Whether or not to enable relative mode\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, or -\/1 if relative mode is not supported.
+\end{DoxyReturn}
+While the mouse is in relative mode, the cursor is hidden, and the driver will try to report continuous motion in the current window. Only relative motion events will be delivered, the mouse position will not change.
+
+\begin{DoxyNote}{Note}
+This function will flush any pending mouse motion.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_s_d_l__mouse_8h_ae97aaf1682b3a6b62214dda1dda9b212}{S\+D\+L\+\_\+\+Get\+Relative\+Mouse\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a00286ec15cd56dee1fd71ed4e6e7a585}\label{_s_d_l__mouse_8h_a00286ec15cd56dee1fd71ed4e6e7a585}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_ShowCursor@{SDL\_ShowCursor}}
+\index{SDL\_ShowCursor@{SDL\_ShowCursor}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_ShowCursor()}{SDL\_ShowCursor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} int \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Show\+Cursor (\begin{DoxyParamCaption}\item[{int}]{toggle }\end{DoxyParamCaption})}
+
+
+
+Toggle whether or not the cursor is shown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em toggle} & 1 to show the cursor, 0 to hide it, -\/1 to query the current state.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the cursor is shown, or 0 if the cursor is hidden. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__mouse_8h_a2f2259cdf30272b3c4cc1e3236cb8071}\label{_s_d_l__mouse_8h_a2f2259cdf30272b3c4cc1e3236cb8071}} 
+\index{SDL\_mouse.h@{SDL\_mouse.h}!SDL\_WarpMouseInWindow@{SDL\_WarpMouseInWindow}}
+\index{SDL\_WarpMouseInWindow@{SDL\_WarpMouseInWindow}!SDL\_mouse.h@{SDL\_mouse.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_WarpMouseInWindow()}{SDL\_WarpMouseInWindow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{D\+E\+C\+L\+S\+P\+EC}} \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{S\+D\+L\+C\+A\+LL}} S\+D\+L\+\_\+\+Warp\+Mouse\+In\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Moves the mouse to the given position within the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The window to move the mouse into, or N\+U\+LL for the current mouse focus \\
+\hline
+{\em x} & The x coordinate within the window \\
+\hline
+{\em y} & The y coordinate within the window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function generates a mouse motion event 
+\end{DoxyNote}
