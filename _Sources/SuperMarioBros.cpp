@@ -37,6 +37,7 @@ namespace Game
 		level += "{[20,0]} {[21,0]} {[22,0]} {[23,0]} {[24,0]} {[25,0]} {[26,0]} {[27,0]} {[28,0]} {[29,0]}";
 		level += "{[0 ,-1]}";
 		level += "{[5 ,-1]}";
+		level += "{[10 ,-1]}";
 
 		char char_array[1024];
 		strcpy(char_array, level.c_str());

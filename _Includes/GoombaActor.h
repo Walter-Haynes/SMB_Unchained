@@ -24,8 +24,11 @@ namespace Game
 				void Kill() override;
 
 			private:
-				float max_speed_ = 15.0f; //TODO: Maybe move to base Actor?
+				float max_speed_ = 2.0f; //TODO: Maybe move to base Actor?
 
+				/*!
+				 *  left = -1, right = +1, left+right = 0, none = 0
+				 */
 				int input_dir_ = -1;
 
 				ColliderComponent* player_check_trigger_;

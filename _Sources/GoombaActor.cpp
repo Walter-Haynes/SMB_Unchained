@@ -3,6 +3,7 @@
 #include "GoombaActor.h"
 
 #include "PlayerActor.h"
+
 #include "SuperMarioBros.h"
 
 namespace Game
@@ -26,11 +27,16 @@ namespace Game
 
 			void GoombaActor::Update()
 			{
-				//ApplyGravity();
+				if(!CheckIsGrounded())
+				{
+					ApplyGravity();
+				}
 				
 				CheckWallCollisions();
 				
 				Walk();
+
+				//CheckWallCollisions();
 				
 				transform_->Update();
 
@@ -88,19 +94,16 @@ namespace Game
 
 			void GoombaActor::CheckWallCollisions()
 			{
-				//input_dir_ = 0;
-				//if Collision on the left
-					//input_dir_ =  1;  //right
-				//else if Collision on the right.
-					//input_dir_ = -1; //left
-
-				//input_dir_ = 0;
 
 				for (int i = 0; i < ColliderComponent::GetCount(); ++i)
 				{
 					ColliderComponent* check_against = ColliderComponent::GetInstance(i);
 
+					//Skip own colliders.
 					if (check_against == this->collider_) continue;
+
+					//Skip triggers.
+					if (check_against->is_trigger) continue;
 
 					if (collider_->CollidesWith(check_against))
 					{
@@ -109,14 +112,17 @@ namespace Game
 						//Only change direction if we've hit a wall, otherwise keep going.
 						if (hit)
 						{
-
-							if (Equals(hit->normal.x, -1) && hit->delta.x < -1.1f) //Left
+							//Left
+							if(Equals(hit->normal.x, -1) && hit->delta.x < -1.05f)
 							{
-								input_dir_ = 1;
+								//std::cout << "L" << std::endl;
+								input_dir_ = 1; //flip to going right.
 							}
-							if (Equals(hit->normal.x, 1) && hit->delta.x > 1.1f) //Right
+							//Right
+							if(Equals(hit->normal.x,  1) && hit->delta.x >  1.05f)
 							{
-								input_dir_ = -1;
+								//std::cout << "R" << std::endl;
+								input_dir_ =  -1; //flip to going left
 							}
 						}
 					}
@@ -126,9 +132,7 @@ namespace Game
 
 			void GoombaActor::Walk()
 			{
-				const int input_dir = 0; //left = -1, right = +1, left+right = 0, none = 0
-				
-				transform_->velocity.x = input_dir * (max_speed_ * DeltaTime());
+				transform_->velocity.x = input_dir_ * max_speed_;
 			}
 		}
 	}

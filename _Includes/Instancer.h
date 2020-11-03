@@ -44,8 +44,8 @@ namespace Engine
 		{
 			for(unsigned int i = 0; i < GetCount(); i++)
 			{
-				auto a = (*instances)[i];
-				auto b = static_cast<T*>(this);
+				T* a = (*instances)[i];
+				T* b = static_cast<T*>(this);
 				
 				if(a == b)
 				{
