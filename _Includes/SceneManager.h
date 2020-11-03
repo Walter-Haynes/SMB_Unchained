@@ -3,15 +3,16 @@
 #include <Scene.h>
 
 #include <Manager.h>
+using Engine::Utilities::Manager;
 
 namespace Engine
 {
 	namespace Managers
 	{
-		/// <summary>
-		/// Handles Loading and Unloading of (multiple) Scenes.
-		/// </summary>
-		class SceneManager : public Utilities::Manager<SceneManager>
+		/*!
+		 *  Manages Loading and Unloading of (multiple) Scenes.
+		 */
+		class SceneManager : public Manager<SceneManager>
 		{
 		public:
 			Scene* current_scene = nullptr;

@@ -12,7 +12,7 @@ namespace Game
 		namespace Actors
 		{
 
-			class PlayerActor final : public Actor
+			class PlayerActor final : public Actor, public Manager<PlayerActor>
 			{
 			public:
 				PlayerActor();

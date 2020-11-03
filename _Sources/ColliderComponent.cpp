@@ -68,7 +68,7 @@ namespace Engine
 
 		void ColliderComponent::DebugBounds(const Tmpl8::Pixel color)
 		{
-			const vec2 screen_pos = Managers::RenderManager::Instance()->ConvertWorldToScreen(Centre()) * MathUtilities::UNITS_TO_PIXELS;
+			const vec2 screen_pos = Managers::RenderManager::Instance()->ConvertWorldToScreen(OffsetCentre()) * MathUtilities::UNITS_TO_PIXELS;
 
 			Managers::RenderManager::Instance()->GetMainCamera()->GetWindow()->Box(
 				screen_pos.x - (GetExtends()->x * MathUtilities::UNITS_TO_PIXELS),
@@ -85,7 +85,7 @@ namespace Engine
 
 		vec2 ColliderComponent::OffsetCentre()
 		{
-			return Centre() + offset;
+			return (Centre() + offset);
 		}
 	}
 }

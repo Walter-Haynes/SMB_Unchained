@@ -18,9 +18,10 @@ using Engine::Types::List;
 using Game::Prefabs::GameCamera;
 #include <PlayerActor.h>
 using Game::Prefabs::Actors::PlayerActor;
+#include <GoombaActor.h>
+using Game::Prefabs::Actors::GoombaActor;
 #include <PowerTile.h>
 using Game::Prefabs::Tiles::PowerTile;
-
 
 
 namespace Game
@@ -36,9 +37,9 @@ namespace Game
 
 		#pragma region Loop
 	
-		void Start();
-		void Update();
-		void Stop();
+		void Start() const;
+		void Update() const;
+		void Stop() const;
 
 		#pragma endregion Loop
 
@@ -82,6 +83,8 @@ namespace Game
 		GameCamera* game_camera_ = new GameCamera;
 
 		PlayerActor* player_actor_ = new PlayerActor;
+
+		GoombaActor* goomba_actor_ = new GoombaActor;
 
 		PowerTile* power_tile_test_ = new PowerTile;
 

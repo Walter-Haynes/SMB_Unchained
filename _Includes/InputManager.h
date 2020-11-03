@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Manager.h>
+using Engine::Utilities::Manager;
 
 #include <map>
 #include <string>
@@ -12,9 +13,13 @@ namespace Engine
 {
 	namespace Managers
 	{
-		//TODO: Make a custom Map if I can find the time.
-		
-		class InputManager final : public Utilities::Manager<InputManager>
+		//TODO: Make a custom Map if I can find the time. (so I don't have to use STL stuff.
+
+		/*!
+		 *  Manages all Input information.
+		 *  Use this to set up and access the states of keys, position of the mouse, etc.
+		 */
+		class InputManager final : public Manager<InputManager>
 		{
 		public:
 			void RegisterNewKey(int key, const std::string& name);
@@ -22,7 +27,7 @@ namespace Engine
 			/*!
 			 *  Returns the current state of the key [name].
 			 *
-			 *      @param [in] name: Name of what key to check.
+			 *      @param [in] name Name of what key to check.
 			 *
 			 *      @return True when the key is held down, False if it's not.
 			 */
@@ -30,7 +35,7 @@ namespace Engine
 			/*!
 			 *  Returns true when the state of the key [name] changes to "NOT being pressed".
 			 *
-			 *      @param [in] name: Name of what key to check.
+			 *      @param [in] name Name of what key to check.
 			 *
 			 *      @return True when the key's state switched to "NOT being pressed" this frame.
 			 */
@@ -38,7 +43,7 @@ namespace Engine
 			/*!
 			 *  Returns true when the state of the key [name] changes to "being pressed".
 			 *
-			 *      @param [in] name: Name of what key to check.
+			 *      @param [in] name Name of what key to check.
 			 *
 			 *      @return True when the key's state switched to "being pressed" this frame.
 			 */

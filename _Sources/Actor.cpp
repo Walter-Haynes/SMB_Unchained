@@ -32,6 +32,13 @@ namespace Game
 				collider_->bounds = bounds;
 			}
 
+			Actor::~Actor()
+			{
+				RemoveComponent(transform_);
+				RemoveComponent(renderer_);
+				RemoveComponent(collider_);
+			}
+
 			void Actor::Kill()
 			{
 				
@@ -58,6 +65,9 @@ namespace Game
 
 					//Skip own colliders.
 					if (check_against == this->collider_) continue;
+
+					//Skip triggers.
+					if (check_against->is_trigger) continue;
 
 					//return true if the collider we're checking against collides with the player's "ground check collider".
 					if (collider_->CollidesWith(check_against))

@@ -26,6 +26,8 @@ namespace Engine
 			vec2 bounds = *new vec2(1,1);
 			vec2 offset;
 
+			bool is_trigger = false;
+
 			vec2* GetExtends()
 			{
 				if (extends_) return extends_;
