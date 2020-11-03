@@ -3,6 +3,7 @@
 #include "GoombaActor.h"
 
 #include "PlayerActor.h"
+#include "SuperMarioBros.h"
 
 namespace Game
 {
@@ -26,7 +27,6 @@ namespace Game
 			void GoombaActor::Update()
 			{
 				//ApplyGravity();
-				KillIfStomped();
 				
 				CheckWallCollisions();
 				
@@ -37,10 +37,13 @@ namespace Game
 				player_check_trigger_->DebugBounds(0x00FF00);
 
 				ResolveIntersects();
+
+				KillIfStomped();
 			}
 
 			void GoombaActor::Kill()
 			{
+				SuperMarioBros::Instance()->DeleteGoombas();
 				delete(this);
 			}
 

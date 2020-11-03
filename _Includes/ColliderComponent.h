@@ -30,7 +30,7 @@ namespace Engine
 
 			vec2* GetExtends()
 			{
-				if (extends_) return extends_;
+				if (extends_ != nullptr) return extends_;
 
 				return (extends_ = new vec2(bounds * 0.5f));
 			}

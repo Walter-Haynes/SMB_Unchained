@@ -44,7 +44,7 @@ namespace Engine
 					if (components_[i] == comp)
 					{
 						components_.RemoveAt(i);
-						delete(comp);
+						//delete(comp);
 					}
 				}
 

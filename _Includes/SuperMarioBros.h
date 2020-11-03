@@ -43,6 +43,11 @@ namespace Game
 
 		#pragma endregion Loop
 
+		void DeleteGoombas()
+		{
+			goomba_actor_ = nullptr;
+		}
+
 		#pragma region Manager Shortcuts
 
 		/*!
@@ -80,7 +85,7 @@ namespace Game
 		#pragma endregion Manager Shortcuts
 
 	private:
-		GameCamera* game_camera_ = new GameCamera;
+		//GameCamera* game_camera_ = new GameCamera;
 
 		PlayerActor* player_actor_ = new PlayerActor;
 

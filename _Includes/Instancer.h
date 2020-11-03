@@ -13,7 +13,7 @@ namespace Engine
 		{
 		public:
 			static T* GetInstance(unsigned int index);
-			static void Destroy();
+			static void DestroyAll();
 
 			static List<T*>* instances;
 
@@ -42,7 +42,16 @@ namespace Engine
 		template<typename T>
 		Instancer<T>::~Instancer()
 		{
-			//this->Destroy();
+			for(unsigned int i = 0; i < GetCount(); i++)
+			{
+				auto a = (*instances)[i];
+				auto b = static_cast<T*>(this);
+				
+				if(a == b)
+				{
+					instances->RemoveAt(i);
+				}
+			}
 		}
 
 
@@ -58,7 +67,7 @@ namespace Engine
 		}
 
 		template<typename T>
-		void Instancer<T>::Destroy()
+		void Instancer<T>::DestroyAll()
 		{
 			delete instances;
 		}

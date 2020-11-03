@@ -69,7 +69,7 @@ namespace Game
 
 		player_actor_->Update();
 
-		if(goomba_actor_)
+		if(goomba_actor_ != nullptr)
 		{
 			goomba_actor_->Update();
 		}

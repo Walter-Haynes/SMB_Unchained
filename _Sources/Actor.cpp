@@ -35,11 +35,21 @@ namespace Game
 			Actor::~Actor()
 			{
 				RemoveComponent(transform_);
-				//delete(transform_);
+				delete(transform_);
+				transform_ = nullptr;
+				
+				
 				RemoveComponent(renderer_);
-				//delete(renderer_);
+				delete(renderer_);
+				renderer_ = nullptr;
+				
+				
 				RemoveComponent(collider_);
-				//delete(collider_);
+				delete(collider_);
+				collider_ = nullptr;
+				
+
+				printf("Actor Destroyed");
 			}
 
 			void Actor::Kill()
