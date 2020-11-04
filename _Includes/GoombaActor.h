@@ -11,6 +11,7 @@ namespace Game
 	{
 		namespace Actors
 		{
+			
 			class GoombaActor final : public Actor
 			{
 			public:

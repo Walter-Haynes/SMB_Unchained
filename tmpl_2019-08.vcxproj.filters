@@ -70,7 +70,9 @@
     <ClCompile Include="_Sources\GoombaActor.cpp">
       <Filter>Game Code\Prefabs\Actors</Filter>
     </ClCompile>
-    <ClCompile Include="CoinPickup.cpp" />
+    <ClCompile Include="_Sources\CoinPickup.cpp">
+      <Filter>Game Code\Prefabs\Pickups</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_Includes\surface.h">
@@ -166,7 +168,9 @@
     <ClInclude Include="_Includes\PowerTile.h">
       <Filter>Game Code\Prefabs\Tiles</Filter>
     </ClInclude>
-    <ClInclude Include="CoinPickup.h" />
+    <ClInclude Include="_Includes\CoinPickup.h">
+      <Filter>Game Code\Prefabs\Pickups</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Template Code">
