@@ -14,12 +14,15 @@ namespace Game
 			{
 			public:
 				CoinPickup();
+				~CoinPickup();
 				
 				void Update() override;
-
-				void CollectIfTriggered();
 				
 				void Collect() override;
+
+			private:
+				void CollectIfTriggered();
+
 			};
 		}
 	}

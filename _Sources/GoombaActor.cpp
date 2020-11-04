@@ -49,7 +49,7 @@ namespace Game
 
 			void GoombaActor::Kill()
 			{
-				SuperMarioBros::Instance()->DeleteGoombas();
+				SuperMarioBros::Instance()->DeleteGoombaPointers();
 				delete(this);
 			}
 

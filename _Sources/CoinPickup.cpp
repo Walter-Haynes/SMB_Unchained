@@ -22,6 +22,8 @@ namespace Game
 			{
 			}
 
+			CoinPickup::~CoinPickup() = default;
+
 			void CoinPickup::Update()
 			{
 				CollectIfTriggered();
@@ -29,6 +31,7 @@ namespace Game
 
 			void CoinPickup::CollectIfTriggered()
 			{
+				//if (collider_ != nullptr)
 				if (PlayerActor::Instance()->GetCollider()->CollidesWith(collider_))
 				{
 					this->Collect();
@@ -39,7 +42,7 @@ namespace Game
 			{
 				PlayerStatsManager::Instance()->AddCoins(1);
 
-				SuperMarioBros::Instance()->DeleteGoombas();
+				SuperMarioBros::Instance()->DeleteCoinPointers();
 				delete(this);
 			}
 		}

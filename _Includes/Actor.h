@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Behaviour.h"
+#include <Behaviour.h>
 using Engine::Behaviour;
 
-#include "TransformComponent.h"
+#include <TransformComponent.h>
 using Engine::Components::TransformComponent;
-#include "RendererComponent.h"
+#include <RendererComponent.h>
 using Engine::Components::RendererComponent;
-#include "ColliderComponent.h"
+#include <ColliderComponent.h>
 using Engine::Components::ColliderComponent;
 
 #include <MathUtilities.h>
@@ -52,7 +52,7 @@ namespace Game
 					return collider_;
 				}
 
-				#pragma endregion  Default Components
+				#pragma endregion Default Components
 				
 			protected:
 				TransformComponent* transform_;

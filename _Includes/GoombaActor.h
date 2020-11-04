@@ -18,9 +18,7 @@ namespace Game
 				GoombaActor();
 				~GoombaActor();
 
-				//void Start() override;
 				void Update() override;
-				//void Stop() override;
 
 				void Kill() override;
 

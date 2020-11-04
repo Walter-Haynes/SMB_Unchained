@@ -47,12 +47,12 @@ namespace Game
 		#pragma endregion Loop
 
 		//Temporary
-		void DeleteGoombas()
+		void DeleteGoombaPointers()
 		{
 			goomba_actor_ = nullptr;
 		}
 
-		void DeleteCoins()
+		void DeleteCoinPointers()
 		{
 			coin_ = nullptr;
 		}

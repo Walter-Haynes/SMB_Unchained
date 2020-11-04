@@ -63,7 +63,6 @@ namespace Game
 		power_tile_test_->GetTransform()->position = *new vec2(4, -3);
 
 		player_actor_->GetTransform()->position = *new vec2(1, -1);
-		//player_actor_->Start();
 
 		coin_->GetTransform()->position = *new vec2(6, -1);
 
@@ -79,7 +78,10 @@ namespace Game
 
 		game_camera_->Update();
 
-		coin_->Update();
+		if(coin_ != nullptr)
+		{
+			coin_->Update();
+		}
 
 		if(goomba_actor_ != nullptr)
 		{

@@ -15,7 +15,6 @@ using namespace Engine::MathUtilities;
 
 using Engine::MathUtilities::PIXELS_TO_UNITS;
 
-
 namespace Game
 {
 	namespace Prefabs
@@ -43,6 +42,8 @@ namespace Game
 				 */
 				virtual void SetPosition(vec2 position);
 
+				#pragma region Default Components
+
 				virtual TransformComponent* GetTransform()
 				{
 					return transform_;
@@ -57,11 +58,13 @@ namespace Game
 				{
 					return collider_;
 				}
+				
+				#pragma endregion Default Components
 
 			protected:
 				TransformComponent* transform_;
-				RendererComponent* renderer_;
-				ColliderComponent* collider_;
+				RendererComponent*  renderer_;
+				ColliderComponent*  collider_;
 
 			};
 		}
