@@ -23,6 +23,9 @@ using Game::Prefabs::Actors::GoombaActor;
 #include <PowerTile.h>
 using Game::Prefabs::Tiles::PowerTile;
 
+#include <CoinPickup.h>
+using Game::Prefabs::Pickups::CoinPickup;
+
 
 namespace Game
 {
@@ -43,9 +46,15 @@ namespace Game
 
 		#pragma endregion Loop
 
+		//Temporary
 		void DeleteGoombas()
 		{
 			goomba_actor_ = nullptr;
+		}
+
+		void DeleteCoins()
+		{
+			coin_ = nullptr;
 		}
 
 		#pragma region Manager Shortcuts
@@ -85,11 +94,13 @@ namespace Game
 		#pragma endregion Manager Shortcuts
 
 	private:
-		//GameCamera* game_camera_ = new GameCamera;
+		GameCamera* game_camera_ = new GameCamera;
 
 		PlayerActor* player_actor_ = new PlayerActor;
 
 		GoombaActor* goomba_actor_ = new GoombaActor;
+
+		CoinPickup* coin_ = new CoinPickup;
 
 		PowerTile* power_tile_test_ = new PowerTile;
 
