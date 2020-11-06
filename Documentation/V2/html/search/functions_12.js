@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['uint4_14316',['uint4',['../class_tmpl8_1_1uint4.html#a5a8a2decafe089979767b3e379aae87c',1,'Tmpl8::uint4::uint4(int v)'],['../class_tmpl8_1_1uint4.html#a130425c29667816de4b645370d0e43ce',1,'Tmpl8::uint4::uint4(int x, int y, int z, int w)']]],
-  ['update_14317',['Update',['../class_engine_1_1_behaviour.html#a4f0e2e78672b931bbad7e79c5bf8b84c',1,'Engine::Behaviour::Update()'],['../class_game_1_1_prefabs_1_1_game_camera.html#aad9da21af2f4967b0ddf215e95b967cc',1,'Game::Prefabs::GameCamera::Update()'],['../class_game_1_1_prefabs_1_1_actors_1_1_goomba_actor.html#a9e90aaa83c1ba071213f6338374ef0b7',1,'Game::Prefabs::Actors::GoombaActor::Update()'],['../class_game_1_1_prefabs_1_1_actors_1_1_player_actor.html#a270b3480bed9a2619f7ba23821abfa6b',1,'Game::Prefabs::Actors::PlayerActor::Update()'],['../class_game_1_1_super_mario_bros.html#ab5317596c9572958a5afa532846fb372',1,'Game::SuperMarioBros::Update()'],['../class_engine_1_1_components_1_1_transform_component.html#af0fcb87ded070fbebdd574bb83fb2069',1,'Engine::Components::TransformComponent::Update()']]],
-  ['updateforeach_14318',['UpdateForEach',['../class_engine_1_1_types_1_1_list.html#a289186c9f4bad7a278dc8574802fd8ac',1,'Engine::Types::List']]]
-];
