@@ -42,7 +42,6 @@ namespace Engine
 					if (scene[i] == '{')
 					{
 						entity_open = true;
-						continue;
 					}
 				}
 				else //if entity_open

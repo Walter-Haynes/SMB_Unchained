@@ -36,6 +36,14 @@ namespace Game
 		level += "{[10,0]} {[11,0]} {[12,0]} {[13,0]} {[14,0]} {[15,0]} {[16,0]} {[17,0]} {[18,0]} {[19,0]}";
 		level += "{[20,0]} {[21,0]} {[22,0]} {[23,0]} {[24,0]} {[25,0]} {[26,0]} {[27,0]} {[28,0]} {[29,0]}";
 
+		level += "{[30,0]} {[31,0]} {[32,0]} {[33,0]} {[34,0]} {[35,0]} {[36,0]} {[37,0]} {[38,0]} {[39,0]}";
+		level += "{[40,0]} {[41,0]} {[42,0]} {[43,0]} {[44,0]} {[45,0]} {[46,0]} {[47,0]} {[48,0]} {[49,0]}";
+		level += "{[50,0]} {[51,0]} {[52,0]} {[53,0]} {[54,0]} {[55,0]} {[56,0]} {[57,0]} {[58,0]} {[59,0]}";
+		
+		level += "{[0 ,-1]}";
+		level += "{[5 ,-1]}";
+		level += "{[10 ,-1]}";
+
 		char char_array[1024];
 		strcpy(char_array, level.c_str());
 
@@ -47,27 +55,43 @@ namespace Game
 	
 	#pragma region Loop
 	
-	void SuperMarioBros::Start()
+	void SuperMarioBros::Start() const
 	{
 		SetupInputs();
 		SetupWorld();
 
-		power_tile_test_->GetTransform()->position = *new vec2(5, -3);
+		power_tile_test_->GetTransform()->position = *new vec2(4, -3);
 
-		player_actor_->Start();
 		player_actor_->GetTransform()->position = *new vec2(1, -1);
+
+		coin_->GetTransform()->position = *new vec2(6, -1);
+
+
+		goomba_actor_->GetTransform()->position = *new vec2(7, -2);
 	}
 
-	void SuperMarioBros::Update()
+	void SuperMarioBros::Update() const
 	{
 		RenderManager()->ClearScreen();
 
 		player_actor_->Update();
+
+		game_camera_->Update();
+
+		if(coin_ != nullptr)
+		{
+			coin_->Update();
+		}
+
+		if(goomba_actor_ != nullptr)
+		{
+			goomba_actor_->Update();
+		}
 		
 		RenderManager()->DrawAllRenderers();
 	}
 
-	void SuperMarioBros::Stop()
+	void SuperMarioBros::Stop() const
 	{
 		player_actor_->Stop();
 	}

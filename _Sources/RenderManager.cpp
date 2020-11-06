@@ -27,6 +27,8 @@ namespace Engine
 				//TODO: Check if inside Camera bounds, only draw then.
 				RendererComponent::GetInstance(i)->Draw(main_camera_);
 			}
+
+			//ClearScreen();
 		}
 
 		bool RenderManager::IsOnScreen(RendererComponent* renderer)
