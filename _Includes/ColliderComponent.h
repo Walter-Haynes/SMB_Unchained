@@ -15,12 +15,22 @@ namespace Engine
 		class ColliderComponent final : public Component, public Utilities::Instancer<ColliderComponent>
 		{
 		public:
-			vec2 bounds;
+			struct Hit2D
+			{
+				//ColliderComponent collider;
+				vec2 contact;
+				vec2 delta;
+				vec2 normal;
+			};
+			
+			vec2 bounds = *new vec2(1,1);
 			vec2 offset;
+
+			bool is_trigger = false;
 
 			vec2* GetExtends()
 			{
-				if (extends_) return extends_;
+				if (extends_ != nullptr) return extends_;
 
 				return (extends_ = new vec2(bounds * 0.5f));
 			}
@@ -43,6 +53,8 @@ namespace Engine
 			bool CollidesWith(const vec2& point);
 			bool CollidesWith(ColliderComponent* other);
 
+			Hit2D* Intersects(ColliderComponent* other);
+
 			void DebugBounds(const Tmpl8::Pixel color);
 
 		private:
@@ -52,7 +64,6 @@ namespace Engine
 			vec2 Centre();
 
 			vec2 OffsetCentre();
-
 		};
 	}
 }

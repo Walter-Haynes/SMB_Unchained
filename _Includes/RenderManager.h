@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Manager.h>
+using Engine::Utilities::Manager;
 
 #include <Camera.h>
 using Engine::Prefabs::Camera;
@@ -12,7 +13,12 @@ namespace Engine
 {
 	namespace Managers
 	{
-		class RenderManager : public Utilities::Manager<RenderManager>
+
+		/*!
+		 *  Manages drawing Renderers to the screen, and keeps track of the main camera.
+		 *  You can use it to convert positions from world to screen, and to check whether something is on screen or not.
+		 */
+		class RenderManager : public Manager<RenderManager>
 		{
 		public:
 			Camera* GetMainCamera() const;
@@ -27,7 +33,7 @@ namespace Engine
 			vec2 ConvertScreenToWorld(const vec2& screen_relative_pos) const;
 
 		private:
-		Camera* main_camera_ = nullptr;
+			Camera* main_camera_ = nullptr;
 
 		};
 

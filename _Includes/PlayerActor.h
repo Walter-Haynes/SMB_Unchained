@@ -12,7 +12,7 @@ namespace Game
 		namespace Actors
 		{
 
-			class PlayerActor final : public Actor
+			class PlayerActor final : public Actor, public Manager<PlayerActor>
 			{
 			public:
 				PlayerActor();
@@ -21,24 +21,42 @@ namespace Game
 				void Update() override;
 				//void Stop() override;
 
+
+				struct Collisions
+				{
+					bool left = false, right = false, up = false, down = false;
+
+					List<ColliderComponent> colliding_colliders;
+				};
+
 			private:
 				float max_speed_ = 15.0f; //TODO: Maybe move to base Actor?
 
 				float ground_walk_acceleration_ = 60.0f, ground_run_acceleration_ = 150.0f,  air_acceleration_ = 30.0f;
 				float ground_deceleration_ = 50;
 
-				float jump_height_ = 20.0f;
+				float jump_height_ = 4.0f;
+				float gravity_ = 50.0f;
 
-				vec2 internal_velocity_;
+				bool is_grounded_ = false;
 
-				ColliderComponent* ground_check_collider_;
+				//vec2 internal_velocity_;
 
-				bool IsGrounded() const;
+				//ColliderComponent* ground_check_collider_;
+
+				
+				float Gravity() const override;
+				
+				bool CheckIsGrounded() const;
+				
+				////TODO: Potentially remove.
+				//Collisions* CheckCollision();
 
 				void Walk();
-				void Jump();
+				void Jump() const;
 
-				void ResolveIntersects();
+			
+				//void ResolveIntersects();
 
 				/*!
 				 *  Shortcut to the Input Manager.
@@ -47,6 +65,7 @@ namespace Game
 				{
 					return InputManager::Instance();
 				}
+
 				
 			};
 		}

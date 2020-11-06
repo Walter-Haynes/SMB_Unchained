@@ -10,6 +10,11 @@ using Engine::Components::RendererComponent;
 #include <ColliderComponent.h>
 using Engine::Components::ColliderComponent;
 
+#include <MathUtilities.h>
+using namespace Engine::MathUtilities;
+
+using Engine::MathUtilities::PIXELS_TO_UNITS;
+
 namespace Game
 {
 	namespace Prefabs
@@ -21,8 +26,14 @@ namespace Game
 			public:
 				Pickup();
 				Pickup(Sprite* sprite);
+				Pickup(Sprite* sprite, const vec2 bounds);
 
-				virtual ~Pickup() = default;
+				virtual ~Pickup();
+
+				/*!
+				 *  Collects the pickup.
+				 */
+				virtual void Collect();
 
 				/*!
 				 *  Sets the pickup's position.
@@ -30,6 +41,8 @@ namespace Game
 				 *      @param [in] position: The pickups's new position IN UNITS.
 				 */
 				virtual void SetPosition(vec2 position);
+
+				#pragma region Default Components
 
 				virtual TransformComponent* GetTransform()
 				{
@@ -45,11 +58,13 @@ namespace Game
 				{
 					return collider_;
 				}
+				
+				#pragma endregion Default Components
 
 			protected:
 				TransformComponent* transform_;
-				RendererComponent* renderer_;
-				ColliderComponent* collider_;
+				RendererComponent*  renderer_;
+				ColliderComponent*  collider_;
 
 			};
 		}

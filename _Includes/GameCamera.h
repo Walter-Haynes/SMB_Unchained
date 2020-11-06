@@ -20,6 +20,16 @@ namespace Game
 			void Update() override;
 
 		private:
+			//float min_x_ = 0.0;
+			//float min_y_ = 10.0;
+
+			/*!
+			 *  The minimum positions on each axis (so the camera doesn't go below the ground for example)
+			 */
+			vec2 min_clamp_ = vec2(0.0f, 3.0f);
+
+			vec2 offset_ = vec2(-5, -10);
+			
 			/*!
 			*  Shortcut to the Input Manager.
 			*/

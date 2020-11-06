@@ -1,19 +1,26 @@
 #pragma once
 
 #include <Manager.h>
+using Engine::Utilities::Manager;
 
 namespace Engine
 {
 	namespace Managers
 	{
-		class TimeManager final : public Utilities::Manager<TimeManager>
+		/*!
+		 *  Manages keeping track of all time information.
+		 */
+		class TimeManager final : public Manager<TimeManager>
 		{
-			public:
-				float GetDeltaTime() const;
-				void SetDeltaTime(float value);
+		public:
+			/*!
+			 *      @return The amount of time IN SECONDS it took to complete the last frame.
+			 */
+			float GetDeltaTime() const;
+			void SetDeltaTime(float value);
 
-			private:
-				float delta_time_ = 0.0f;
+		private:
+			float delta_time_ = 0.0f;
 		};
 	}
 }
