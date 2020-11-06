@@ -1,0 +1,28 @@
+var class_tmpl8_1_1vec4 =
+[
+    [ "vec4", "class_tmpl8_1_1vec4.html#a7b4fee5ee2379d1b4e30b0c180febe72", null ],
+    [ "vec4", "class_tmpl8_1_1vec4.html#af1a18e339e35c03087df3fdc86cbba2b", null ],
+    [ "vec4", "class_tmpl8_1_1vec4.html#a0d1099a32f288613796df5422e580549", null ],
+    [ "dot", "class_tmpl8_1_1vec4.html#a4a83d14f19ffa2f44adefb094e3f4228", null ],
+    [ "length", "class_tmpl8_1_1vec4.html#a0cc9f30538a33633fc34bbb7d5213642", null ],
+    [ "normalize", "class_tmpl8_1_1vec4.html#afffc82b032440653bec1ce5a37587ff5", null ],
+    [ "normalized", "class_tmpl8_1_1vec4.html#a5c03cc8e1ffaf0923701d6e90d500eb6", null ],
+    [ "operator*", "class_tmpl8_1_1vec4.html#a671fb667b9aa4d76eb37fb4fb1e05420", null ],
+    [ "operator*=", "class_tmpl8_1_1vec4.html#a0b37f6b991a7f02c8789b817c3960195", null ],
+    [ "operator*=", "class_tmpl8_1_1vec4.html#a1a077619fe7824ee8186e5b7f9a04e58", null ],
+    [ "operator+", "class_tmpl8_1_1vec4.html#a37bfc84fc7b48e2b29d8325c9d11e1f8", null ],
+    [ "operator+=", "class_tmpl8_1_1vec4.html#a4a8b19682c362c947bb241c8899116a1", null ],
+    [ "operator-", "class_tmpl8_1_1vec4.html#a36d7546e00f8901191f08a364ba88234", null ],
+    [ "operator-", "class_tmpl8_1_1vec4.html#a4a5e6455f58613fa97d041b6928d5919", null ],
+    [ "operator-=", "class_tmpl8_1_1vec4.html#a1cd1f399cf531e4b3a054044706da9dc", null ],
+    [ "operator[]", "class_tmpl8_1_1vec4.html#aa72fca5d5201387eec38ff34ead4dee1", null ],
+    [ "operator[]", "class_tmpl8_1_1vec4.html#a78cd4a238b7419f89f26a7b0c42df568", null ],
+    [ "sqrLength", "class_tmpl8_1_1vec4.html#a7d122966e91178e23a2500f13ad17c9d", null ],
+    [ "cell", "class_tmpl8_1_1vec4.html#a3c36475bac8d65761402351b18ad923c", null ],
+    [ "w", "class_tmpl8_1_1vec4.html#a9f85b12d79c0ca23cc9a5e96456e352d", null ],
+    [ "w2", "class_tmpl8_1_1vec4.html#a7fb30d8d269e4bbe8b9ac16b7b960fe7", null ],
+    [ "x", "class_tmpl8_1_1vec4.html#adc5ec1096690c394bc108a843737a230", null ],
+    [ "xyz", "class_tmpl8_1_1vec4.html#a488f88364dd7132235b402d756353c1d", null ],
+    [ "y", "class_tmpl8_1_1vec4.html#ad8ac87a5c1b3de987f08b39a99288072", null ],
+    [ "z", "class_tmpl8_1_1vec4.html#a531cc11330d59593a3a847f6cf89e2cf", null ]
+];

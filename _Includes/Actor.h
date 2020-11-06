@@ -1,16 +1,18 @@
 #pragma once
 
-#include "Behaviour.h"
+#include <Behaviour.h>
 using Engine::Behaviour;
 
-#include "TransformComponent.h"
+#include <TransformComponent.h>
 using Engine::Components::TransformComponent;
-#include "RendererComponent.h"
+#include <RendererComponent.h>
 using Engine::Components::RendererComponent;
-#include "ColliderComponent.h"
+#include <ColliderComponent.h>
 using Engine::Components::ColliderComponent;
 
-#include "MathUtilities.h"
+#include <MathUtilities.h>
+using namespace Engine::MathUtilities;
+
 using Engine::MathUtilities::PIXELS_TO_UNITS;
 
 namespace Game
@@ -25,6 +27,13 @@ namespace Game
 				Actor();
 				Actor(Sprite* sprite);
 				Actor(Sprite* sprite, const vec2 bounds);
+
+				virtual ~Actor();
+
+				/*!
+				 *  Kills the actor, override to add custom death behaviour.
+				 */
+				virtual void Kill();
 
 				#pragma region Default Components
 				
@@ -43,16 +52,29 @@ namespace Game
 					return collider_;
 				}
 
-				#pragma endregion  Default Components
+				#pragma endregion Default Components
 				
 			protected:
 				TransformComponent* transform_;
 				RendererComponent*  renderer_;
 				ColliderComponent*  collider_;
-				
-				float gravity_ = -9.8f;
 
-				void ApplyGravity() const;
+				/*!
+				 * Override this if you want gravity other than the default.
+				 *      @return The gravity variable
+				 */
+				virtual float Gravity() const;
+
+				virtual void ApplyGravity() const;
+
+				/*!
+				 *  Pushes the Actor's collider out of colliders it's intersecting with.
+				 */
+				virtual void ResolveIntersects();
+
+			private:
+				const float DEFAULT_GRAVITY_ = 50.0f; //9.8f;
+				
 			};
 		}
 	}

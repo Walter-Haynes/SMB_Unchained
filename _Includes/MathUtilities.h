@@ -13,31 +13,62 @@ namespace Engine
 {
 	namespace MathUtilities
 	{
+		/*!
+		 *  Use this to convert from Degrees to Radians.
+		 *  (PI / 180)
+		 */
 		constexpr float DEG_TO_RAD = 0.017453f; // PI/180
+		/*!
+		 *  Use this to convert from Radians to Degrees.
+		 *  (180 / PI)
+		 */
 		constexpr float RAD_TO_DEG = 57.2957795131f; // 180/PI
 
+		/*!
+		 *  Use this to convert from Pixel values to Unit values.
+		 *  (1 / Pixels Per Unit)
+		 */
 		constexpr float PIXELS_TO_UNITS = 1.0f / PIXELS_PER_UNIT;
-		constexpr float UNITS_TO_PIXELS = PIXELS_PER_UNIT; //1*Pixels Per Unit
+		/*!
+		 *  Use this to convert from Unit values to Pixel values.
+		 *  (1 * Pixels Per Unit)
+		 */
+		constexpr float UNITS_TO_PIXELS = PIXELS_PER_UNIT;
 
 		constexpr float DEFAULT_EPSILON = 0.0000000001f;
 
+		
 		inline float Min(const float a, const float b)
 		{
 			return((a < b) ? a : b);
 		}
-
 		inline float Max(const float a, const float b)
 		{
 			return((a > b) ? a : b);
 		}
 
-		//float Abs
 
+		/*!
+		 *  Returns the sign of a (float) number - aka whether the positive, negative, or zero
+		 *
+		 *      @return The sign of a number. (-1 / 0 / +1) as an integer.
+		 */
 		inline int Sign(const float val)
 		{
-			if (val > 0) return 1;
+			if (val > 0) return  1;
 			if (val < 0) return -1;
 			return 0;
+		}
+		/*!
+		 *  Returns the sign of a (float) number - aka whether the positive, negative, or zero
+		 *
+		 *      @return The sign of a number. (-1 / 0 / +1) as a float.
+		 */
+		inline float SignF(const float val)
+		{
+			if (val > 0) return  1.0f;
+			if (val < 0) return -1.0f;
+			return 0.0f;
 		}
 
 		inline float Clamp(float value, const float min, const float max)

@@ -2,7 +2,9 @@
 
 #include <TransformComponent.h>
 
-#include "GameSettings.h"
+#include <GameSettings.h>
+#include <TimeManager.h>
+using Engine::Managers::TimeManager;
 
 namespace Engine
 {
@@ -19,7 +21,7 @@ namespace Engine
 
 		void TransformComponent::Update()
 		{
-			position += velocity;
+			position += (velocity * TimeManager::Instance()->GetDeltaTime());
 		}
 
 		/*!

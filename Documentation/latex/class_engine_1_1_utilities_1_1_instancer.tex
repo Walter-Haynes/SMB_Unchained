@@ -1,0 +1,96 @@
+\hypertarget{class_engine_1_1_utilities_1_1_instancer}{}\doxysection{Engine\+::Utilities\+::Instancer$<$ T $>$ Class Template Reference}
+\label{class_engine_1_1_utilities_1_1_instancer}\index{Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}}
+
+
+Class that statically tracks all instances of itself.  
+
+
+
+
+{\ttfamily \#include $<$Instancer.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T $\ast$ \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer_a29898ff5a3e6144b3168d0b83673720c}{Get\+Instance}} (unsigned int \mbox{\hyperlink{_s_d_l__opengl_8h_a57f14e05b1900f16a2da82ade47d0c6d}{index}})
+\item 
+static \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer_a45f879bed4196c567fd203756899c495}{Destroy}} ()
+\item 
+static unsigned int \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer_ad377a75015de59c7c5cf7f5e2c9e4358}{Get\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_engine_1_1_types_1_1_list}{List}}$<$ T $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer_a9f38f97dc7fc18e453a891856e8aecbb}{instances}} = new \mbox{\hyperlink{class_engine_1_1_types_1_1_list}{List}}$<$T$\ast$$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer_acc5cfe557ef6558fdfd5f16d5538b4e6}{Instancer}} ()
+\item 
+\mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer_a66c20a1faf37d382753590b42da2dc06}{$\sim$\+Instancer}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Engine\+::\+Utilities\+::\+Instancer$<$ T $>$}
+
+Class that statically tracks all instances of itself. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_engine_1_1_utilities_1_1_instancer_acc5cfe557ef6558fdfd5f16d5538b4e6}\label{class_engine_1_1_utilities_1_1_instancer_acc5cfe557ef6558fdfd5f16d5538b4e6}} 
+\index{Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}!Instancer@{Instancer}}
+\index{Instancer@{Instancer}!Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Instancer()}{Instancer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Engine\+::\+Utilities\+::\+Instancer}}$<$ T $>$\+::\mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Instancer}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_engine_1_1_utilities_1_1_instancer_a66c20a1faf37d382753590b42da2dc06}\label{class_engine_1_1_utilities_1_1_instancer_a66c20a1faf37d382753590b42da2dc06}} 
+\index{Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}!````~Instancer@{$\sim$Instancer}}
+\index{````~Instancer@{$\sim$Instancer}!Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Instancer()}{~Instancer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Engine\+::\+Utilities\+::\+Instancer}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Instancer}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_engine_1_1_utilities_1_1_instancer_a45f879bed4196c567fd203756899c495}\label{class_engine_1_1_utilities_1_1_instancer_a45f879bed4196c567fd203756899c495}} 
+\index{Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Engine\+::\+Utilities\+::\+Instancer}}$<$ T $>$\+::Destroy\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_engine_1_1_utilities_1_1_instancer_ad377a75015de59c7c5cf7f5e2c9e4358}\label{class_engine_1_1_utilities_1_1_instancer_ad377a75015de59c7c5cf7f5e2c9e4358}} 
+\index{Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}!GetCount@{GetCount}}
+\index{GetCount@{GetCount}!Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetCount()}{GetCount()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+unsigned int \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Engine\+::\+Utilities\+::\+Instancer}}$<$ T $>$\+::Get\+Count\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_engine_1_1_utilities_1_1_instancer_a29898ff5a3e6144b3168d0b83673720c}\label{class_engine_1_1_utilities_1_1_instancer_a29898ff5a3e6144b3168d0b83673720c}} 
+\index{Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T $\ast$ \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Engine\+::\+Utilities\+::\+Instancer}}$<$ T $>$\+::Get\+Instance (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_engine_1_1_utilities_1_1_instancer_a9f38f97dc7fc18e453a891856e8aecbb}\label{class_engine_1_1_utilities_1_1_instancer_a9f38f97dc7fc18e453a891856e8aecbb}} 
+\index{Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}!instances@{instances}}
+\index{instances@{instances}!Engine::Utilities::Instancer$<$ T $>$@{Engine::Utilities::Instancer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{instances}{instances}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_engine_1_1_types_1_1_list}{List}}$<$ T $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_engine_1_1_utilities_1_1_instancer}{Engine\+::\+Utilities\+::\+Instancer}}$<$ T $>$\+::instances = new \mbox{\hyperlink{class_engine_1_1_types_1_1_list}{List}}$<$T$\ast$$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+\_\+\+Projects/\+Jacco\+Template/\+\_\+\+Includes/\mbox{\hyperlink{_instancer_8h}{Instancer.\+h}}\end{DoxyCompactItemize}

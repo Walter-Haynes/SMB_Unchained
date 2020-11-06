@@ -1,0 +1,144 @@
+\hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor}{}\doxysection{Game\+::Prefabs\+::Actors\+::Actor Class Reference}
+\label{class_game_1_1_prefabs_1_1_actors_1_1_actor}\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+
+
+{\ttfamily \#include $<$Actor.\+h$>$}
+
+Inheritance diagram for Game\+::Prefabs\+::Actors\+::Actor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_game_1_1_prefabs_1_1_actors_1_1_actor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a61b80c8c1d7cfff008c06e0f31a72505}{Actor}} ()
+\item 
+\mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a36d1a2e0ee762d306eea9f27461fd9c5}{Actor}} (\mbox{\hyperlink{class_tmpl8_1_1_sprite}{Sprite}} $\ast$sprite)
+\item 
+\mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9a58993d401ed5fa98660f78b8ac41c4}{Actor}} (\mbox{\hyperlink{class_tmpl8_1_1_sprite}{Sprite}} $\ast$sprite, const \mbox{\hyperlink{class_tmpl8_1_1vec2}{vec2}} bounds)
+\item 
+virtual \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_acd90c405f2f54f73602f8a0019407df0}{Kill}} ()
+\item 
+virtual \mbox{\hyperlink{class_engine_1_1_components_1_1_transform_component}{Transform\+Component}} $\ast$ \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a34e3fdf2cb445167c51f503b3ff898c3}{Get\+Transform}} ()
+\item 
+virtual \mbox{\hyperlink{class_engine_1_1_components_1_1_renderer_component}{Renderer\+Component}} $\ast$ \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_ab3f81cc7cec08e920510c86b0d001e56}{Get\+Renderer}} ()
+\item 
+virtual \mbox{\hyperlink{class_engine_1_1_components_1_1_collider_component}{Collider\+Component}} $\ast$ \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a098a90d015f668c1311fe39b8f61463f}{Get\+Collider}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a34e067b73e90c8b8d8c7253a86b1113a}{Gravity}} () const
+\item 
+virtual \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a72d75673186e5de3ec93824f49b2ec46}{Apply\+Gravity}} () const
+\item 
+virtual \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9f3934c58dd57f8d5204cd9cdcd1bce9}{Resolve\+Intersects}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_components_1_1_transform_component}{Transform\+Component}} $\ast$ \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a6b6e22843d7dee90280807fa15cafdea}{transform\+\_\+}}
+\item 
+\mbox{\hyperlink{class_engine_1_1_components_1_1_renderer_component}{Renderer\+Component}} $\ast$ \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9086016f66c18fd68b2ab3b2586ecced}{renderer\+\_\+}}
+\item 
+\mbox{\hyperlink{class_engine_1_1_components_1_1_collider_component}{Collider\+Component}} $\ast$ \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor_a327958087012ef24ddac525cea43c689}{collider\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a61b80c8c1d7cfff008c06e0f31a72505}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a61b80c8c1d7cfff008c06e0f31a72505}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!Actor@{Actor}}
+\index{Actor@{Actor}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{Actor()}{Actor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Actor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a36d1a2e0ee762d306eea9f27461fd9c5}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a36d1a2e0ee762d306eea9f27461fd9c5}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!Actor@{Actor}}
+\index{Actor@{Actor}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{Actor()}{Actor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Actor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tmpl8_1_1_sprite}{Sprite}} $\ast$}]{sprite }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9a58993d401ed5fa98660f78b8ac41c4}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9a58993d401ed5fa98660f78b8ac41c4}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!Actor@{Actor}}
+\index{Actor@{Actor}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{Actor()}{Actor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Actor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tmpl8_1_1_sprite}{Sprite}} $\ast$}]{sprite,  }\item[{const \mbox{\hyperlink{class_tmpl8_1_1vec2}{vec2}}}]{bounds }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a72d75673186e5de3ec93824f49b2ec46}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a72d75673186e5de3ec93824f49b2ec46}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!ApplyGravity@{ApplyGravity}}
+\index{ApplyGravity@{ApplyGravity}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{ApplyGravity()}{ApplyGravity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Apply\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a098a90d015f668c1311fe39b8f61463f}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a098a90d015f668c1311fe39b8f61463f}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!GetCollider@{GetCollider}}
+\index{GetCollider@{GetCollider}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{GetCollider()}{GetCollider()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_engine_1_1_components_1_1_collider_component}{Collider\+Component}}$\ast$ Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Get\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_ab3f81cc7cec08e920510c86b0d001e56}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_ab3f81cc7cec08e920510c86b0d001e56}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_engine_1_1_components_1_1_renderer_component}{Renderer\+Component}}$\ast$ Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a34e3fdf2cb445167c51f503b3ff898c3}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a34e3fdf2cb445167c51f503b3ff898c3}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{GetTransform()}{GetTransform()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_engine_1_1_components_1_1_transform_component}{Transform\+Component}}$\ast$ Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a34e067b73e90c8b8d8c7253a86b1113a}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a34e067b73e90c8b8d8c7253a86b1113a}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!Gravity@{Gravity}}
+\index{Gravity@{Gravity}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{Gravity()}{Gravity()}}
+{\footnotesize\ttfamily float Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Override this if you want gravity other than the default. \begin{DoxyReturn}{Returns}
+The gravity variable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_acd90c405f2f54f73602f8a0019407df0}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_acd90c405f2f54f73602f8a0019407df0}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!Kill@{Kill}}
+\index{Kill@{Kill}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Kills the actor, override to add custom death behaviour. \mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9f3934c58dd57f8d5204cd9cdcd1bce9}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9f3934c58dd57f8d5204cd9cdcd1bce9}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!ResolveIntersects@{ResolveIntersects}}
+\index{ResolveIntersects@{ResolveIntersects}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{ResolveIntersects()}{ResolveIntersects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a3db05964a3cc4410f35b7ea2b7eb850d}{void}} Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::\+Resolve\+Intersects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Pushes the \mbox{\hyperlink{class_game_1_1_prefabs_1_1_actors_1_1_actor}{Actor}}\textquotesingle{}s collider out of colliders it\textquotesingle{}s intersecting with. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a327958087012ef24ddac525cea43c689}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a327958087012ef24ddac525cea43c689}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!collider\_@{collider\_}}
+\index{collider\_@{collider\_}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{collider\_}{collider\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine_1_1_components_1_1_collider_component}{Collider\+Component}}$\ast$ Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::collider\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9086016f66c18fd68b2ab3b2586ecced}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a9086016f66c18fd68b2ab3b2586ecced}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!renderer\_@{renderer\_}}
+\index{renderer\_@{renderer\_}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{renderer\_}{renderer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine_1_1_components_1_1_renderer_component}{Renderer\+Component}}$\ast$ Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::renderer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_game_1_1_prefabs_1_1_actors_1_1_actor_a6b6e22843d7dee90280807fa15cafdea}\label{class_game_1_1_prefabs_1_1_actors_1_1_actor_a6b6e22843d7dee90280807fa15cafdea}} 
+\index{Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}!transform\_@{transform\_}}
+\index{transform\_@{transform\_}!Game::Prefabs::Actors::Actor@{Game::Prefabs::Actors::Actor}}
+\doxysubsubsection{\texorpdfstring{transform\_}{transform\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine_1_1_components_1_1_transform_component}{Transform\+Component}}$\ast$ Game\+::\+Prefabs\+::\+Actors\+::\+Actor\+::transform\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+\_\+\+Projects/\+Jacco\+Template/\+\_\+\+Includes/\mbox{\hyperlink{_actor_8h}{Actor.\+h}}\item 
+C\+:/\+\_\+\+Projects/\+Jacco\+Template/\+\_\+\+Sources/\mbox{\hyperlink{_actor_8cpp}{Actor.\+cpp}}\end{DoxyCompactItemize}

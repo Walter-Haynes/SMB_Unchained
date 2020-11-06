@@ -18,24 +18,18 @@ namespace Game
 			{
 				vec2 cam_pos = RenderManager::Instance()->GetMainCamera()->GetCameraPosition();
 
-				const float speed = DeltaTime() * (Input()->GetKeyDown("Special") ? 8.0f : 2.0f);
+				const TransformComponent* target = PlayerActor::Instance()->GetTransform();
 
-				if (Input()->GetKeyDown("Up"))
-				{
-					cam_pos.y -= speed;
-				}
-				if (Input()->GetKeyDown("Down"))
-				{
-					cam_pos.y += speed;
-				}
-				if (Input()->GetKeyDown("Left"))
-				{
-					cam_pos.x -= speed;
-				}
-				if (Input()->GetKeyDown("Right"))
-				{
-					cam_pos.x += speed;
-				}
+				cam_pos = target->position + offset_;
+				
+				//cam_pos.x = Min((target->position.x + offset_.x), min_x_);
+				//cam_pos.y = Min((target->position.y + offset_.y), min_y_);
+
+				cam_pos.x <= min_clamp_.x ? min_clamp_.x : cam_pos.x;
+				cam_pos.y <= min_clamp_.y ? min_clamp_.y : cam_pos.y;
+
+				
+				
 				RenderManager::Instance()->GetMainCamera()->SetCameraPosition(cam_pos);
 			}
 		}

@@ -11,10 +11,37 @@ namespace Game
 	{
 		namespace Actors
 		{
+			
 			class GoombaActor final : public Actor
 			{
 			public:
-			GoombaActor();
+				GoombaActor();
+				~GoombaActor();
+
+				void Update() override;
+
+				void Kill() override;
+
+			private:
+				float max_speed_ = 2.0f; //TODO: Maybe move to base Actor?
+
+				/*!
+				 *  left = -1, right = +1, left+right = 0, none = 0
+				 */
+				int input_dir_ = -1;
+
+				ColliderComponent* player_check_trigger_;
+
+
+				bool CheckIsGrounded() const;
+				void KillIfStomped();
+				
+				//bool is_going_left_ = false;
+				
+				void CheckWallCollisions();
+				
+				void Walk();
+
 			};
 		}
 	}
